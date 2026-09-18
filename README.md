@@ -26,3 +26,16 @@ an unfamiliar esoteric text.
 4. Follow-up: if available, ask ChatGPT and Claude the same question.
 5. Verify: find a site that can run the code and see if the assistants were
    right.
+
+---
+
+## Exercise 3: You don't need English
+
+**Goal:** show that your native language works just as well as English.
+
+1. Pick a question from exercise 1 or 2 and ask it in your native language
+   instead.
+2. Compare: is the answer as correct and fluent as the English one? Are code
+   comments/variable names still in English, or do they follow your prompt?
+3. Follow-up: ask a question the way you'd actually phrase it at work —
+   mixing your native language with English technical terms.
