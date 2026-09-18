@@ -39,3 +39,40 @@ an unfamiliar esoteric text.
    comments/variable names still in English, or do they follow your prompt?
 3. Follow-up: ask a question the way you'd actually phrase it at work —
    mixing your native language with English technical terms.
+
+---
+
+## Exercise 4: A replacement for that app you downloaded once
+
+**Goal:** show that a chat assistant can replace single-purpose apps/sites
+for everyday tasks, not just coding questions.
+
+1. Think of the ingredients still left in your fridge and ask Copilot Chat
+   what meal you could make with them.
+2. Follow-up: add a constraint: vegetarian, under 20 minutes, no oven,
+   kid-friendly, etc.
+3. Follow-up: ask for a website that can do this.
+4. Verify: check if the website is indeed able to do the same and if using
+   it is as easy as asking an AI-assistant.
+5. Compare: how many separate apps/sites/tabs would this have taken
+   otherwise (recipe search, a filter for dietary needs, maybe a
+   converter for quantities)?
+
+---
+
+## Exercise 5: Skipping the blank sheet
+
+**Goal:** use AI to get past the blank-page phase when creating something
+from scratch, for example a presentation from a set of requirements.
+
+1. Write down 3-4 requirements for a short presentation (audience, topic,
+   number of slides, tone/purpose — e.g. "10-minute update for management on
+   our test automation coverage"). If inspiration is failing, use this:
+   `I want to give a presentation on using AI. The presentation is about one hour. The audience is broad, both techies and normies. Experience level is from none to creating skills. Any ideas how to take this on?`
+2. Ask Copilot Chat to draft an outline or slide-by-slide structure from
+   those requirements.
+3. Follow-up: ask it to flesh out one slide's content, or suggest a stronger
+   opening/closing.
+4. Compare: not a finished deck, but a starting point — how much of the
+   "staring at an empty slide" phase did this skip? What would you still
+   change yourself?
