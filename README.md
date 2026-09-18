@@ -1,6 +1,6 @@
 # AI Workshop — Exercises
 
-## Exercise 1: A Better Interface to Google
+## Exercise 1: A better interface for web search
 
 **Goal:** compare a Google search against asking Copilot directly.
 
@@ -13,7 +13,7 @@
 
 ---
 
-## Exercise 2: Reading Something You Can't Read
+## Exercise 2: Reading something you can't read
 
 **Goal:** show Copilot understanding something no search engine can help with:
 an unfamiliar esoteric text.
