@@ -1,11 +1,5 @@
 # AI Workshop — Exercises
 
-Exercises and examples for the Copilot demo portion of the workshop. Each
-exercise gets its own section below for now; once there's enough content
-we'll decide how to split things into separate files/folders.
-
----
-
 ## Exercise 1: A Better Interface to Google
 
 **Goal:** compare a Google search against asking Copilot directly.
