@@ -68,11 +68,42 @@ from scratch, for example a presentation from a set of requirements.
 1. Write down 3-4 requirements for a short presentation (audience, topic,
    number of slides, tone/purpose — e.g. "10-minute update for management on
    our test automation coverage"). If inspiration is failing, use this:
-   `I want to give a presentation on using AI. The presentation is about one hour. The audience is broad, both techies and normies. Experience level is from none to creating skills. Any ideas how to take this on?`
+
+   > I want to give a presentation on using AI. The presentation is about
+   > one hour. The audience is broad, both techies and normies. Experience
+   > level is from none to creating skills. Any ideas how to take this on?
 2. Ask Copilot Chat to draft an outline or slide-by-slide structure from
    those requirements.
 3. Follow-up: ask it to flesh out one slide's content, or suggest a stronger
    opening/closing.
-4. Compare: not a finished deck, but a starting point — how much of the
+4. Compare: how much of the
    "staring at an empty slide" phase did this skip? What would you still
    change yourself?
+
+---
+
+## Exercise 6: Making sense of a wall of logs
+
+**Goal:** show Copilot analyzing noisy, real-world logs faster
+than scanning them by hand.
+
+> A customer says their order failed at checkout with some kind of server
+> error. They didn't note the exact time. Can you find out what happened?
+
+1. `examples/order-service.log` is 2,500 lines of logs.
+   Try skimming for a minute — would you have found
+   it from the ticket alone?
+2. Paste the ticket and the log file into Copilot Chat and ask it to
+   investigate.
+3. Follow-up: "Is this a one-off, or a problem other customers will hit
+   too?"
+4. Compare: did Copilot locate the actual failure and reason about the
+   pattern building up to it, or
+   did it grab the first ERROR-looking line and stop? How long would
+   finding it yourself have taken, starting only from the ticket?
+
+> Note: Copilot is severely limited in the amount of logging it can
+> handle. Files larger than 10.000 lines can't be retrieved by the
+> assistant ('file has expired') and only the first +- 3.000 lines
+> are seen ('file truncated'). ChatGPT and Claude work correctly with
+> a 12.000 line file, probably much larger.
