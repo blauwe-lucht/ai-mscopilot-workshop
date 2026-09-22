@@ -5,7 +5,7 @@
 **Goal:** compare a Google search against asking Copilot directly.
 
 1. Google: `git rebase vs merge`. Skim the first 3 non-ad results.
-2. Ask Copilot Chat: "What's the difference between `git rebase` and
+2. Ask Copilot: "What's the difference between `git rebase` and
    `git merge`, and when should I use each one?"
 3. Compare: speed to a trustworthy answer, and whether it covers *when* to
    use each, not just *what* they do.
@@ -19,7 +19,7 @@
 an unfamiliar esoteric text.
 
 1. Open `examples/wtf.txt`.
-2. Paste it into Copilot Chat and ask: "What does this code do?"
+2. Paste it into Copilot and ask: "What does this code do?"
 3. Compare: a Google search for a random snippet like this returns nothing
    useful — there's no textual match to find. Copilot instead reasons about
    the code itself.
@@ -47,7 +47,7 @@ an unfamiliar esoteric text.
 **Goal:** show that a chat assistant can replace single-purpose apps/sites
 for everyday tasks, not just coding questions.
 
-1. Think of the ingredients still left in your fridge and ask Copilot Chat
+1. Think of the ingredients still left in your fridge and ask Copilot
    what meal you could make with them.
 2. Follow-up: add a constraint: vegetarian, under 20 minutes, no oven,
    kid-friendly, etc.
@@ -72,7 +72,7 @@ from scratch, for example a presentation from a set of requirements.
    > I want to give a presentation on using AI. The presentation is about
    > one hour. The audience is broad, both techies and normies. Experience
    > level is from none to creating skills. Any ideas how to take this on?
-2. Ask Copilot Chat to draft an outline or slide-by-slide structure from
+2. Ask Copilot to draft an outline or slide-by-slide structure from
    those requirements.
 3. Follow-up: ask it to flesh out one slide's content, or suggest a stronger
    opening/closing.
@@ -93,7 +93,7 @@ than scanning them by hand.
 1. `examples/order-service.log` is 2,500 lines of logs.
    Try skimming for a minute — would you have found
    it from the ticket alone?
-2. Paste the ticket and the log file into Copilot Chat and ask it to
+2. Paste the ticket and the log file into Copilot and ask it to
    investigate.
 3. Follow-up: "Is this a one-off, or a problem other customers will hit
    too?"
@@ -107,3 +107,28 @@ than scanning them by hand.
 > assistant ('file has expired') and only the first +- 3.000 lines
 > are seen ('file truncated'). ChatGPT and Claude work correctly with
 > a 12.000 line file, probably much larger.
+
+---
+
+## Exercise 7: Tests for code nobody tested
+
+**Goal:** have Copilot write unit tests for existing code, and find out
+whether it catches bugs or just confirms what the code already does.
+
+> A colleague wrote this discount calculator before going on leave. It goes
+> to production on Friday and has no tests. Can you cover it?
+
+1. Open `examples/pricing` in IntelliJ (open the `pom.xml` as a project).
+   Read `PriceCalculator.java` for a minute. Do you see anything wrong?
+2. Paste `PriceCalculator.java` into Copilot and ask: "Write JUnit 5 tests
+   for this class. Base them on the business rules in the comment."
+3. Copy the tests into `src/test/java/shop/PriceCalculatorTest.java` and run
+   them.
+4. Follow-up: for every failing test, paste the failure into Copilot and ask:
+   "Is the test wrong or the code?"
+5. Tester variant: paste **only** the business rules from the comment, no
+   code, and ask for test cases (boundary values, combinations). Compare
+   them with the test cases you would have written.
+6. Compare: did Copilot test the boundaries and combinations, or only the
+   easy cases? When a test failed, did it blame the code, or suggest
+   changing the test to match the code?

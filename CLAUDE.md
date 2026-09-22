@@ -3,7 +3,8 @@
 ## Purpose
 
 This repo supports an AI workshop for developers and testers at a company
-where **GitHub Copilot** is the only AI assistant allowed for use. The
+where **Microsoft Copilot** is the only AI assistant allowed for use (not
+GitHub Copilot — they are different products). The
 workshop has two parts:
 
 1. **Lingo/theory** — explain the terminology and underlying techniques
@@ -11,8 +12,8 @@ workshop has two parts:
    context window, tokens, RAG, fine-tuning, agents, MCP, hallucination,
    temperature, embeddings, system prompt vs. user prompt, local vs. online/
    cloud models, agentic AI).
-2. **Live Copilot demo** — show what an online AI coding assistant can
-   actually do, using this repo's exercise/example files as the material for
+2. **Live Copilot demo** — show what an online AI assistant can actually
+   do, using this repo's exercise/example files as the material for
    demonstration and hands-on exercises.
 
 Audience: mixed developers and testers. Format: half-day session (~3-4
@@ -39,7 +40,11 @@ files/folders — don't split preemptively.
   how the repo is organized.
 - Exercise files should be realistic but small enough to demo/explain within
   a workshop session.
-- Since Copilot is the only AI tool attendees are allowed to use at work,
-  demo content and instructions should be Copilot-specific (not generic
-  "any AI assistant" instructions), even though this repo itself is being
-  built with Claude Code.
+- Since Microsoft Copilot is the only AI tool attendees are allowed to use
+  at work, demo content and instructions should be specific to Microsoft
+  Copilot (not generic "any AI assistant" instructions), even though this
+  repo itself is being built with Claude Code.
+- Microsoft Copilot has no IDE integration (no inline completions, no agent
+  mode, no access to the project). Exercises must work through the chat
+  (browser, Edge sidebar or app): paste or attach code/files, and copy
+  results back into the IDE by hand.
