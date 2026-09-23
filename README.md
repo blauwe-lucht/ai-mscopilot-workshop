@@ -110,7 +110,27 @@ than scanning them by hand.
 
 ---
 
-## Exercise 7: Code written by a genius
+## Exercise 7: From a photo to a spreadsheet
+
+**Goal:** show Copilot reading a photo of a printed page and turning it into
+structured data you can use right away.
+
+1. Open a new chat in Copilot and drag `examples/spanish.jpg` into it. It's a
+   phone photo of a vocabulary list from a Spanish textbook.
+2. Ask: "From UNIDAD 3 create a csv, separated by ';'. First column name is
+   'Spanish', second is 'Dutch'."
+3. Save the result as a `.csv` file and open it in Excel. Does every row end
+   up in the right column?
+4. Verify: pick 10 random words and check them against the photo.
+5. Follow-up: "Create a quiz from this list: give me 10 Dutch words and I'll
+   answer in Spanish."
+6. Compare: how long would typing this list yourself have taken? What would
+   you normally use for this: a scanner app, OCR software, or just typing it
+   over?
+
+---
+
+## Exercise 8: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -136,7 +156,7 @@ who never considered that other people less smart would have to read it.
 
 ---
 
-## Exercise 8: Tests for code nobody tested
+## Exercise 9: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -160,23 +180,3 @@ whether it catches bugs or just confirms what the code already does.
 7. Compare: did Copilot test the boundaries and combinations, or only the
    easy cases? When a test failed, did it blame the code, or suggest
    changing the test to match the code?
-
----
-
-## Exercise 9: From a photo to a spreadsheet
-
-**Goal:** show Copilot reading a photo of a printed page and turning it into
-structured data you can use right away.
-
-1. Open a new chat in Copilot and drag `examples/spanish.jpg` into it. It's a
-   phone photo of a vocabulary list from a Spanish textbook.
-2. Ask: "From UNIDAD 3 create a csv, separated by ';'. First column name is
-   'Spanish', second is 'Dutch'."
-3. Save the result as a `.csv` file and open it in Excel. Does every row end
-   up in the right column?
-4. Verify: pick 10 random words and check them against the photo.
-5. Follow-up: "Create a quiz from this list: give me 10 Dutch words and I'll
-   answer in Spanish."
-6. Compare: how long would typing this list yourself have taken? What would
-   you normally use for this: a scanner app, OCR software, or just typing it
-   over?
