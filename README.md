@@ -135,14 +135,12 @@ structured data you can use right away.
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
 
-> The developer who wrote this is brilliant. Unfortunately, he left last
-> month. There are no tests since he is brilliant, nobody dares to touch
-> it, and now it needs a change. What does it do?
-
 1. Open `examples/Checks.java`. Give yourself two minutes: what do the two
    `ok` methods check?
-2. Paste the file into Copilot and ask: "Explain what this code does, step
-   by step, for someone who doesn't know Java streams."
+2. Paste the file into Copilot and ask:
+   > The developer who wrote this is brilliant. Unfortunately, he left last
+   > month. There are no tests since he is brilliant, nobody dares to touch
+   > it, and now it needs a change. What does it do?
 3. Follow-up: "Why `c > 57`, `- 55` and `% 97`? Where do these numbers come
    from?"
 4. Follow-up: "How brilliant was he really?"
@@ -161,9 +159,6 @@ who never considered that other people less smart would have to read it.
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
 
-> A colleague wrote this discount calculator before going on leave. It goes
-> to production on Friday and has no tests. Can you cover it?
-
 1. Open `examples/pricing` in IntelliJ (open the `pom.xml` as a project).
    Read `PriceCalculator.java` for a minute. Do you see anything wrong?
 2. Paste `PriceCalculator.java` into Copilot and ask: "Write JUnit 5 tests
@@ -180,3 +175,28 @@ whether it catches bugs or just confirms what the code already does.
 7. Compare: did Copilot test the boundaries and combinations, or only the
    easy cases? When a test failed, did it blame the code, or suggest
    changing the test to match the code?
+
+---
+
+## Exercise 10: Reviewing and refactoring code that looks fine
+
+**Goal:** use Copilot to spot design problems in code that works and looks
+tidy, and refactor it safely.
+
+1. Open `examples/invoicing` in IntelliJ and read `InvoiceService.java`, with
+   `orders.csv` as example input. Short methods, a record, streams,
+   constants: what would you change?
+2. Paste `InvoiceService.java` into Copilot and ask: "Review this class for
+   design problems. Don't change anything yet."
+3. Ask: "What about mixing abstraction levels?"
+4. Before refactoring, ask for tests that pin down the current behaviour:
+   "Write JUnit 5 tests for the current behaviour, using this orders.csv."
+   (Paste `orders.csv` as well.) Run them; they must pass *before* you
+   change anything.
+5. Ask Copilot to refactor, one step at a time. For example: "Split this
+   into classes with a single responsibility," then "Make the pricing
+   rules testable without writing files." Run the tests after every step.
+6. Follow-up: "Which of your changes alter behaviour, even slightly?"
+7. Compare: did Copilot find the same problems as you? Did it make big
+   changes in one go, or did it take small, safe steps? Did the tests stay
+   green, or did it quietly change the tests to make them pass?
