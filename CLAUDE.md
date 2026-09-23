@@ -16,7 +16,8 @@ workshop has two parts:
    do, using this repo's exercise/example files as the material for
    demonstration and hands-on exercises.
 
-Audience: mixed developers and testers. Format: half-day session (~3-4
+Audience: mixed developers and testers at a Dutch company, so Dutch-specific
+examples (IBAN, BSN, Dutch text) work well. Format: half-day session (~3-4
 hours).
 
 ## What lives in this repo

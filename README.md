@@ -110,7 +110,33 @@ than scanning them by hand.
 
 ---
 
-## Exercise 7: Tests for code nobody tested
+## Exercise 7: Code written by a genius
+
+**Goal:** have Copilot explain code that is correct, but written by someone
+who never considered that other people less smart would have to read it.
+
+> The developer who wrote this is brilliant. Unfortunately, he left last
+> month. There are no tests since he is brilliant, nobody dares to touch
+> it, and now it needs a change. What does it do?
+
+1. Open `examples/Checks.java`. Give yourself two minutes: what do the two
+   `ok` methods check?
+2. Paste the file into Copilot and ask: "Explain what this code does, step
+   by step, for someone who doesn't know Java streams."
+3. Follow-up: "Why `c > 57`, `- 55` and `% 97`? Where do these numbers come
+   from?"
+4. Follow-up: "How brilliant was he really?"
+5. Follow-up: "Rewrite this so a junior developer can maintain it. Use clear
+   names and no magic numbers."
+6. Verify: does the rewrite still give the same results? Ask Copilot for a
+   few valid and invalid inputs and try them on both versions.
+7. Compare: did Copilot recognize *what* the code is for, or only describe
+   the mechanics line by line? Would you trust its rewrite without tests?
+   (See the next exercise.)
+
+---
+
+## Exercise 8: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -137,7 +163,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 8: From a photo to a spreadsheet
+## Exercise 9: From a photo to a spreadsheet
 
 **Goal:** show Copilot reading a photo of a printed page and turning it into
 structured data you can use right away.
