@@ -130,7 +130,28 @@ structured data you can use right away.
 
 ---
 
-## Exercise 8: Code written by a genius
+## Exercise 8: Test cases before there is code
+
+**Goal:** use Copilot to decide which tests to write while the feature is
+still on paper, and to find the gaps in the requirements.
+
+1. Open `examples/delivery-date.md` and read the user story. Write down the
+   first five test cases you would want.
+2. Paste the user story into Copilot and ask: "Which unit tests should be
+   implemented for this during development? Give them as a table with the
+   input and the expected result."
+3. Follow-up: "Which boundary values and combinations are missing?"
+4. Follow-up: "What is unclear or contradictory in these requirements?
+   Which questions should we ask the product owner?"
+5. Follow-up: "Which of these tests are unit tests, and which belong in an
+   integration or end-to-end test?"
+6. Compare: how many of your five test cases did Copilot find? Which of its
+   test cases would you not have thought of? Did it invent requirements
+   that aren't in the story, and present them as fact?
+
+---
+
+## Exercise 9: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -154,7 +175,7 @@ who never considered that other people less smart would have to read it.
 
 ---
 
-## Exercise 9: Tests for code nobody tested
+## Exercise 10: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -169,16 +190,13 @@ whether it catches bugs or just confirms what the code already does.
    "Is the test wrong or the code?"
 5. Follow-up: check the quality of the tests. Improve it by giving a new
    prompt.
-6. Tester variant: paste **only** the business rules from the comment, no
-   code, and ask for test cases (boundary values, combinations). Compare
-   them with the test cases you would have written.
-7. Compare: did Copilot test the boundaries and combinations, or only the
+6. Compare: did Copilot test the boundaries and combinations, or only the
    easy cases? When a test failed, did it blame the code, or suggest
    changing the test to match the code?
 
 ---
 
-## Exercise 10: Reviewing and refactoring code that looks fine
+## Exercise 11: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
