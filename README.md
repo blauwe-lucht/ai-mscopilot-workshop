@@ -126,9 +126,31 @@ whether it catches bugs or just confirms what the code already does.
    them.
 4. Follow-up: for every failing test, paste the failure into Copilot and ask:
    "Is the test wrong or the code?"
-5. Tester variant: paste **only** the business rules from the comment, no
+5. Follow-up: check the quality of the tests. Improve it by giving a new
+   prompt.
+6. Tester variant: paste **only** the business rules from the comment, no
    code, and ask for test cases (boundary values, combinations). Compare
    them with the test cases you would have written.
-6. Compare: did Copilot test the boundaries and combinations, or only the
+7. Compare: did Copilot test the boundaries and combinations, or only the
    easy cases? When a test failed, did it blame the code, or suggest
    changing the test to match the code?
+
+---
+
+## Exercise 8: From a photo to a spreadsheet
+
+**Goal:** show Copilot reading a photo of a printed page and turning it into
+structured data you can use right away.
+
+1. Open a new chat in Copilot and drag `examples/spanish.jpg` into it. It's a
+   phone photo of a vocabulary list from a Spanish textbook.
+2. Ask: "From UNIDAD 3 create a csv, separated by ';'. First column name is
+   'Spanish', second is 'Dutch'."
+3. Save the result as a `.csv` file and open it in Excel. Does every row end
+   up in the right column?
+4. Verify: pick 10 random words and check them against the photo.
+5. Follow-up: "Create a quiz from this list: give me 10 Dutch words and I'll
+   answer in Spanish."
+6. Compare: how long would typing this list yourself have taken? What would
+   you normally use for this: a scanner app, OCR software, or just typing it
+   over?
