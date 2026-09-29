@@ -280,3 +280,27 @@ tidy, and refactor it safely.
 7. Compare: did Copilot find the same problems as you? Did it make big
    changes in one go, or did it take small, safe steps? Did the tests stay
    green, or did it quietly change the tests to make them pass?
+
+---
+
+## Exercise 14: It compiles, but it doesn't run
+
+**Goal:** let Copilot guide you through a dependency conflict: the code
+compiles fine, but crashes at runtime with an error that doesn't point to
+the cause.
+
+1. Open `examples/export` in IntelliJ (open the `pom.xml` as a project). It
+   exports orders as JSON and as CSV. Run `OrderExportTest` (`mvn clean test`):
+   both tests fail with a `NoClassDefFoundError`.
+2. Paste the error and the stack trace into Copilot and ask: "The code
+   compiles fine, but the tests fail with this error. What's going on, and
+   how do I fix it?"
+3. Follow the steps one at a time. When Copilot asks for more information,
+   such as the `pom.xml` or the output of `mvn dependency:tree`, give it.
+4. Follow-up: "Why did Maven pick this version, and not the other one?"
+5. Verify: both tests pass.
+6. Compare: did Copilot find the real cause, or suggest adding the "missing"
+   class some other way? Did it give you more than one fix (upgrading, a
+   Jackson BOM, an exclusion, declaring the dependency yourself) and explain
+   which one is best? Did it suggest versions that don't exist? How long
+   would you have searched for `JacksonFeature` yourself?
