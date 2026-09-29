@@ -13,7 +13,28 @@
 
 ---
 
-## Exercise 2: Reading something you can't read
+## Exercise 2: A question that needs checking
+
+**Goal:** ask a technical question where the answer depends on versions and
+on what Copilot knows, and practise checking its claims.
+
+1. Ask Copilot: "When migrating from Java 17 to Java 21, what are the
+   greatest challenges?"
+2. Follow-up: add your real context, e.g. "We use Spring Boot 3.1, Maven,
+   Lombok and Mockito, and run in Docker." Does the answer get more specific,
+   or just longer?
+3. Follow-up: "Which of these are actually new between Java 17 and 21, and
+   which would apply to any Java upgrade?"
+4. Verify: ask Copilot for its sources. Do the links exist, and do they say
+   what Copilot claims? Check two claims against the official list of
+   changes for Java 21: <https://openjdk.org/projects/jdk/21/>
+5. Compare: search Google for `java 17 to 21 migration` and skim the first
+   vendor blog. Which gave you a more trustworthy answer, and which a more
+   useful one?
+
+---
+
+## Exercise 3: Reading something you can't read
 
 **Goal:** show Copilot understanding something no search engine can help with:
 an unfamiliar esoteric text.
@@ -29,12 +50,12 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 3: You don't need English
+## Exercise 4: You don't need English
 
 **Goal:** show that your native language works just as well as English.
 
-1. Pick a question from exercise 1 or 2 and ask it in your native language
-   instead.
+1. Pick a question from exercise 1, 2 or 3 and ask it in your native
+   language instead.
 2. Compare: is the answer as correct and fluent as the English one? Are code
    comments/variable names still in English, or do they follow your prompt?
 3. Follow-up: ask a question the way you'd actually phrase it at work —
@@ -42,7 +63,7 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 4: A replacement for that app you downloaded once
+## Exercise 5: A replacement for that app you downloaded once
 
 **Goal:** show that a chat assistant can replace single-purpose apps/sites
 for everyday tasks, not just coding questions.
@@ -60,7 +81,7 @@ for everyday tasks, not just coding questions.
 
 ---
 
-## Exercise 5: Skipping the blank sheet
+## Exercise 6: Skipping the blank sheet
 
 **Goal:** use AI to get past the blank-page phase when creating something
 from scratch, for example a presentation from a set of requirements.
@@ -82,7 +103,7 @@ from scratch, for example a presentation from a set of requirements.
 
 ---
 
-## Exercise 6: Making sense of a wall of logs
+## Exercise 7: Making sense of a wall of logs
 
 **Goal:** show Copilot analyzing noisy, real-world logs faster
 than scanning them by hand.
@@ -110,7 +131,7 @@ than scanning them by hand.
 
 ---
 
-## Exercise 7: From a photo to a spreadsheet
+## Exercise 8: From a photo to a spreadsheet
 
 **Goal:** show Copilot reading a photo of a printed page and turning it into
 structured data you can use right away.
@@ -130,7 +151,7 @@ structured data you can use right away.
 
 ---
 
-## Exercise 8: Test cases before there is code
+## Exercise 9: Test cases before there is code
 
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
@@ -151,7 +172,7 @@ still on paper, and to find the gaps in the requirements.
 
 ---
 
-## Exercise 9: Code written by a genius
+## Exercise 10: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -175,7 +196,7 @@ who never considered that other people less smart would have to read it.
 
 ---
 
-## Exercise 10: Tests for code nobody tested
+## Exercise 11: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -196,7 +217,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 11: Reviewing and refactoring code that looks fine
+## Exercise 12: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
