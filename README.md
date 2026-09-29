@@ -151,7 +151,48 @@ structured data you can use right away.
 
 ---
 
-## Exercise 9: Test cases before there is code
+## Exercise 9: Getting a password out of Git history
+
+**Goal:** let Copilot guide you, step by step, through a difficult task you
+rarely do: removing a password that has already been pushed.
+
+1. Run `examples/git-secret-setup.sh` (on Windows: from Git Bash). It creates
+   an `ai-workshop-repos` directory next to this repo, with a remote
+   `origin`, your clone `webshop` and a colleague's clone `colleague`
+   (leave that one alone for now). Three commits ago the database
+   password was committed in `application.properties` and pushed. The
+   latest commit replaced it with an environment variable, but the password
+   is still in the history.
+   Run the script again whenever you want to start over.
+2. In `ai-workshop-repos/webshop`, look for yourself:
+   `git log -p -- application.properties`.
+3. Ask Copilot: "A database password was committed to our Git repo a few
+   commits ago, and it has already been pushed. A later commit removed it
+   again. How do I get it out of the history completely?"
+4. Follow the steps one at a time. Paste the output of every command back
+   into Copilot, errors included, and let it decide the next step.
+5. Follow-up: when Copilot tells you to push with `--force`, ask: "What
+   happens if a teammate pushed in the meantime? Is there a safer way?"
+6. Verify: in `ai-workshop-repos`, make a fresh clone of `origin` and
+   search it for the password. `git clone origin check`, then in directory
+   check `git log -p --all -S Welkom123` must show nothing.
+7. Follow-up: `ai-workshop-repos/colleague` is a teammate's clone. It still
+   has the old history, plus one commit that isn't pushed yet. Try
+   `git pull` there, paste the result into Copilot and ask what your
+   colleague should do. Verify: their commit is still there, on top of your
+   clean history, and `git log --all -S Welkom123` shows nothing.
+8. Compare: did Copilot tell you to change the password anyway, since it
+   has already leaked? Did it use a plain `--force`, or the safer
+   `--force-with-lease` without being asked? Did it warn you about
+   teammates who still have the old history? For your colleague, did it
+   suggest something that throws away their commit (`git reset --hard`), or
+   brings the password back (a merge)? Did it suggest
+   `git filter-repo`, or the outdated `git filter-branch`? Did it ask about
+   your situation, or dump all the steps at once?
+
+---
+
+## Exercise 10: Test cases before there is code
 
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
@@ -172,7 +213,7 @@ still on paper, and to find the gaps in the requirements.
 
 ---
 
-## Exercise 10: Code written by a genius
+## Exercise 11: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -196,7 +237,7 @@ who never considered that other people less smart would have to read it.
 
 ---
 
-## Exercise 11: Tests for code nobody tested
+## Exercise 12: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -217,7 +258,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 12: Reviewing and refactoring code that looks fine
+## Exercise 13: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.

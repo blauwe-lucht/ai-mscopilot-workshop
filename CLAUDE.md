@@ -49,3 +49,8 @@ files/folders — don't split preemptively.
   mode, no access to the project). Exercises must work through the chat
   (browser, Edge sidebar or app): paste or attach code/files, and copy
   results back into the IDE by hand.
+- Exercises that need a Git scenario get a setup script in `examples/`
+  (e.g. `git-secret-setup.sh`), following the style of the
+  `git-advanced-workshop` repo: a bare `origin` plus a clone, commits
+  already pushed. The script creates `ai-workshop-repos/` *next to* this
+  repo, never inside it, to avoid nested repos.
