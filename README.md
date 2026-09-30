@@ -13,7 +13,28 @@
 
 ---
 
-## Exercise 2: A question that needs checking
+## Exercise 2: Something Google does better
+
+**Goal:** find something Copilot won't do, even though a Google search
+gives it to you instantly, and see where exactly the line is.
+
+1. Google: `het is een nacht guus meeuwis lyrics`. The full lyrics are in
+   the first results.
+2. Ask Copilot: "Give me the full lyrics of *Het is een nacht* by Guus
+   Meeuwis."
+3. Follow-up: "Give me just the first verse."
+4. Follow-up: "Translate the lyrics into English."
+5. Follow-up: "Write a parody of it about test automation."
+6. Follow-up: "Where can I find the lyrics legally?"
+7. Compare: Copilot has most likely seen these lyrics many times during
+   training, so why won't it give them?
+   Where exactly is the line: a few lines, a verse, a translation? Did it
+   say clearly why it refused, or just give a vaguer answer? Why is a
+   parody fine?
+
+---
+
+## Exercise 3: A question that needs checking
 
 **Goal:** ask a technical question where the answer depends on versions and
 on what Copilot knows, and practise checking its claims.
@@ -34,7 +55,7 @@ on what Copilot knows, and practise checking its claims.
 
 ---
 
-## Exercise 3: Reading something you can't read
+## Exercise 4: Reading something you can't read
 
 **Goal:** show Copilot understanding something no search engine can help with:
 an unfamiliar esoteric text.
@@ -50,11 +71,11 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 4: You don't need English
+## Exercise 5: You don't need English
 
 **Goal:** show that your native language works just as well as English.
 
-1. Pick a question from exercise 1, 2 or 3 and ask it in your native
+1. Pick a question from exercise 1, 3 or 4 and ask it in your native
    language instead.
 2. Compare: is the answer as correct and fluent as the English one? Are code
    comments/variable names still in English, or do they follow your prompt?
@@ -63,7 +84,7 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 5: A replacement for that app you downloaded once
+## Exercise 6: A replacement for that app you downloaded once
 
 **Goal:** show that a chat assistant can replace single-purpose apps/sites
 for everyday tasks, not just coding questions.
@@ -81,7 +102,7 @@ for everyday tasks, not just coding questions.
 
 ---
 
-## Exercise 6: Skipping the blank sheet
+## Exercise 7: Skipping the blank sheet
 
 **Goal:** use AI to get past the blank-page phase when creating something
 from scratch, for example a presentation from a set of requirements.
@@ -103,7 +124,7 @@ from scratch, for example a presentation from a set of requirements.
 
 ---
 
-## Exercise 7: Making sense of a wall of logs
+## Exercise 8: Making sense of a wall of logs
 
 **Goal:** show Copilot analyzing noisy, real-world logs faster
 than scanning them by hand.
@@ -131,7 +152,7 @@ than scanning them by hand.
 
 ---
 
-## Exercise 8: From a photo to a spreadsheet
+## Exercise 9: From a photo to a spreadsheet
 
 **Goal:** show Copilot reading a photo of a printed page and turning it into
 structured data you can use right away.
@@ -151,7 +172,7 @@ structured data you can use right away.
 
 ---
 
-## Exercise 9: Getting a password out of Git history
+## Exercise 10: Getting a password out of Git history
 
 **Goal:** let Copilot guide you, step by step, through a difficult task you
 rarely do: removing a password that has already been pushed.
@@ -192,7 +213,7 @@ rarely do: removing a password that has already been pushed.
 
 ---
 
-## Exercise 10: Test cases before there is code
+## Exercise 11: Test cases before there is code
 
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
@@ -213,7 +234,7 @@ still on paper, and to find the gaps in the requirements.
 
 ---
 
-## Exercise 11: Code written by a genius
+## Exercise 12: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -233,11 +254,11 @@ who never considered that other people less smart would have to read it.
    few valid and invalid inputs and try them on both versions.
 7. Compare: did Copilot recognize *what* the code is for, or only describe
    the mechanics line by line? Would you trust its rewrite without tests?
-   (See exercise 13.)
+   (See exercise 14.)
 
 ---
 
-## Exercise 12: A thousand test persons
+## Exercise 13: A thousand test persons
 
 **Goal:** have Copilot generate a large set of realistic test data with
 valid check digits, too much to make or check by hand.
@@ -270,7 +291,7 @@ valid check digits, too much to make or check by hand.
 
 ---
 
-## Exercise 13: Tests for code nobody tested
+## Exercise 14: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -291,7 +312,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 14: Reviewing and refactoring code that looks fine
+## Exercise 15: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
@@ -316,7 +337,7 @@ tidy, and refactor it safely.
 
 ---
 
-## Exercise 15: It compiles, but it doesn't run
+## Exercise 16: It compiles, but it doesn't run
 
 **Goal:** let Copilot guide you through a dependency conflict: the code
 compiles fine, but crashes at runtime with an error that doesn't point to
