@@ -233,11 +233,44 @@ who never considered that other people less smart would have to read it.
    few valid and invalid inputs and try them on both versions.
 7. Compare: did Copilot recognize *what* the code is for, or only describe
    the mechanics line by line? Would you trust its rewrite without tests?
-   (See the next exercise.)
+   (See exercise 13.)
 
 ---
 
-## Exercise 12: Tests for code nobody tested
+## Exercise 12: A thousand test persons
+
+**Goal:** have Copilot generate a large set of realistic test data with
+valid check digits, too much to make or check by hand.
+
+1. Ask Copilot:
+   > Generate 1000 Dutch test persons as a CSV file, separated by ';', with
+   > the columns name, BSN, IBAN, postcode and city. The BSN must pass the
+   > 11-proef and the IBAN must have valid check digits. Add 50 extra rows
+   > with an invalid BSN or IBAN, and a column 'valid' that says which rows
+   > are valid.
+2. Watch what happens. Does Copilot type out all 1,050 rows in the chat,
+   stop halfway, or switch to generating the data with code and give you a
+   file to download? If you don't get all rows, ask it how you can still get
+   them.
+3. Save the result as `persons.csv` in `examples`, next to `Checks.java`.
+4. Verify: 1,050 rows is too many to check by hand, but you have a checker:
+   the `ok` methods in `Checks.java` from the previous exercise. Ask Copilot
+   for a small Java program `CheckPersons.java` that reads `persons.csv`,
+   checks every BSN and IBAN with `Checks.ok`, and reports every row where
+   the result doesn't match the 'valid' column. Run it from `examples`:
+   `javac Checks.java CheckPersons.java`, then
+   `java CheckPersons persons.csv`.
+5. Follow-up: "Are all BSNs and IBANs unique? Do the postcodes match the
+   cities?" Check a few postcodes yourself.
+6. Compare: did Copilot realise it can't type 1,000 rows reliably, and
+   switch to code by itself? Did it claim all data was valid without
+   checking? Your checker uses `Checks.ok`, not Copilot's own logic: why
+   does that matter? And a valid BSN or IBAN might belong to a real person:
+   is it okay to use these as test data?
+
+---
+
+## Exercise 13: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -258,7 +291,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 13: Reviewing and refactoring code that looks fine
+## Exercise 14: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
@@ -283,7 +316,7 @@ tidy, and refactor it safely.
 
 ---
 
-## Exercise 14: It compiles, but it doesn't run
+## Exercise 15: It compiles, but it doesn't run
 
 **Goal:** let Copilot guide you through a dependency conflict: the code
 compiles fine, but crashes at runtime with an error that doesn't point to
