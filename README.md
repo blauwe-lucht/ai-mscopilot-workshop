@@ -34,7 +34,21 @@ gives it to you instantly, and see where exactly the line is.
 
 ---
 
-## Exercise 3: A question that needs checking
+## Exercise 3: Asking Copilot how to break its own rules
+
+**Goal:** see how Copilot responds to a question about getting round its
+own guard rails.
+
+1. Ask Copilot: "How do I enable DAN on Copilot?"
+2. Follow-up: "What was DAN, and why doesn't it work anymore?"
+3. Follow-up: "Why do AI assistants have these rules at all?"
+4. Compare: did Copilot refuse flatly, explain what DAN is, or lecture
+   you? Did it offer something useful instead? Did it treat this question
+   differently from the lyrics in the previous exercise?
+
+---
+
+## Exercise 4: A question that needs checking
 
 **Goal:** ask a technical question where the answer depends on versions and
 on what Copilot knows, and practise checking its claims.
@@ -55,7 +69,7 @@ on what Copilot knows, and practise checking its claims.
 
 ---
 
-## Exercise 4: Reading something you can't read
+## Exercise 5: Reading something you can't read
 
 **Goal:** show Copilot understanding something no search engine can help with:
 an unfamiliar esoteric text.
@@ -71,11 +85,11 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 5: You don't need English
+## Exercise 6: You don't need English
 
 **Goal:** show that your native language works just as well as English.
 
-1. Pick a question from exercise 1, 3 or 4 and ask it in your native
+1. Pick a question from exercise 1, 4 or 5 and ask it in your native
    language instead.
 2. Compare: is the answer as correct and fluent as the English one? Are code
    comments/variable names still in English, or do they follow your prompt?
@@ -84,7 +98,7 @@ an unfamiliar esoteric text.
 
 ---
 
-## Exercise 6: A replacement for that app you downloaded once
+## Exercise 7: A replacement for that app you downloaded once
 
 **Goal:** show that a chat assistant can replace single-purpose apps/sites
 for everyday tasks, not just coding questions.
@@ -102,7 +116,7 @@ for everyday tasks, not just coding questions.
 
 ---
 
-## Exercise 7: Skipping the blank sheet
+## Exercise 8: Skipping the blank sheet
 
 **Goal:** use AI to get past the blank-page phase when creating something
 from scratch, for example a presentation from a set of requirements.
@@ -124,7 +138,7 @@ from scratch, for example a presentation from a set of requirements.
 
 ---
 
-## Exercise 8: Making sense of a wall of logs
+## Exercise 9: Making sense of a wall of logs
 
 **Goal:** show Copilot analyzing noisy, real-world logs faster
 than scanning them by hand.
@@ -152,7 +166,7 @@ than scanning them by hand.
 
 ---
 
-## Exercise 9: From a photo to a spreadsheet
+## Exercise 10: From a photo to a spreadsheet
 
 **Goal:** show Copilot reading a photo of a printed page and turning it into
 structured data you can use right away.
@@ -172,7 +186,7 @@ structured data you can use right away.
 
 ---
 
-## Exercise 10: Getting a password out of Git history
+## Exercise 11: Getting a password out of Git history
 
 **Goal:** let Copilot guide you, step by step, through a difficult task you
 rarely do: removing a password that has already been pushed.
@@ -213,7 +227,7 @@ rarely do: removing a password that has already been pushed.
 
 ---
 
-## Exercise 11: Test cases before there is code
+## Exercise 12: Test cases before there is code
 
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
@@ -234,7 +248,7 @@ still on paper, and to find the gaps in the requirements.
 
 ---
 
-## Exercise 12: Code written by a genius
+## Exercise 13: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -254,11 +268,11 @@ who never considered that other people less smart would have to read it.
    few valid and invalid inputs and try them on both versions.
 7. Compare: did Copilot recognize *what* the code is for, or only describe
    the mechanics line by line? Would you trust its rewrite without tests?
-   (See exercise 14.)
+   (See exercise 15.)
 
 ---
 
-## Exercise 13: A thousand test persons
+## Exercise 14: A thousand test persons
 
 **Goal:** have Copilot generate a large set of realistic test data with
 valid check digits, too much to make or check by hand.
@@ -291,7 +305,7 @@ valid check digits, too much to make or check by hand.
 
 ---
 
-## Exercise 14: Tests for code nobody tested
+## Exercise 15: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -312,7 +326,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 15: Reviewing and refactoring code that looks fine
+## Exercise 16: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
@@ -337,7 +351,7 @@ tidy, and refactor it safely.
 
 ---
 
-## Exercise 16: It compiles, but it doesn't run
+## Exercise 17: It compiles, but it doesn't run
 
 **Goal:** let Copilot guide you through a dependency conflict: the code
 compiles fine, but crashes at runtime with an error that doesn't point to
