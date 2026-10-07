@@ -227,7 +227,29 @@ rarely do: removing a password that has already been pushed.
 
 ---
 
-## Exercise 12: Test cases before there is code
+## Exercise 12: A class diagram from a GitHub link
+
+**Goal:** find out whether Copilot actually reads the code behind a link,
+or draws a plausible diagram from the project's name and README.
+
+1. Ask Copilot: "Create a class diagram from
+   <https://github.com/samegens/musical-complexity-analyzer>. Use Mermaid."
+2. Paste the diagram into a `.md` file in IntelliJ, inside a ` ```mermaid `
+   block, and open the Markdown preview. (No diagram? Enable Mermaid under
+   *Settings → Languages & Frameworks → Markdown*.)
+3. Verify: open the repository on GitHub and compare. Do the types in the
+   diagram exist? Look for example in
+   `src/crates/musicxml-analysis/src/model/`.
+4. Follow-up: "Which files did you actually read?"
+5. Follow-up: paste the files from `model/` and `analysis/` yourself and
+   ask for the diagram again. How different is it?
+6. Compare: did Copilot make up types that don't exist? The project is
+   written in Rust, which has structs, enums and traits instead of classes:
+   did Copilot adapt to that, or draw it as if it were Java?
+
+---
+
+## Exercise 13: Test cases before there is code
 
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
@@ -248,7 +270,7 @@ still on paper, and to find the gaps in the requirements.
 
 ---
 
-## Exercise 13: Code written by a genius
+## Exercise 14: Code written by a genius
 
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
@@ -268,11 +290,11 @@ who never considered that other people less smart would have to read it.
    few valid and invalid inputs and try them on both versions.
 7. Compare: did Copilot recognize *what* the code is for, or only describe
    the mechanics line by line? Would you trust its rewrite without tests?
-   (See exercise 15.)
+   (See exercise 16.)
 
 ---
 
-## Exercise 14: A thousand test persons
+## Exercise 15: A thousand test persons
 
 **Goal:** have Copilot generate a large set of realistic test data with
 valid check digits, too much to make or check by hand.
@@ -305,7 +327,7 @@ valid check digits, too much to make or check by hand.
 
 ---
 
-## Exercise 15: Tests for code nobody tested
+## Exercise 16: Tests for code nobody tested
 
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
@@ -326,7 +348,7 @@ whether it catches bugs or just confirms what the code already does.
 
 ---
 
-## Exercise 16: Reviewing and refactoring code that looks fine
+## Exercise 17: Reviewing and refactoring code that looks fine
 
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
@@ -351,7 +373,7 @@ tidy, and refactor it safely.
 
 ---
 
-## Exercise 17: It compiles, but it doesn't run
+## Exercise 18: It compiles, but it doesn't run
 
 **Goal:** let Copilot guide you through a dependency conflict: the code
 compiles fine, but crashes at runtime with an error that doesn't point to
