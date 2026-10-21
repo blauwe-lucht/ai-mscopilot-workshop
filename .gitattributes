@@ -1,0 +1,7 @@
+* text=auto
+
+# Bash fails on CRLF line endings, also in Git Bash on Windows.
+*.sh text eol=lf
+
+*.docx binary
+*.jpg binary
