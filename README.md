@@ -419,9 +419,13 @@ other.
    and a phone charger. Are they delivered together or in two parcels?"
 6. Follow-up: "Write a short message to Jeroen, the product owner, listing
    what has to be fixed in the user story, the functional design and the
-   FAQ."
+   FAQ." Turn the answer into a new page by selecting the dots, choosing
+   'Edit in Pages', then 'Add to new page'. In the corresponding chat, ask
+   Copilot to turn it into a more formal email. Does it change the page?
 7. Compare: the documents contain at least five contradictions. How many
    did Copilot find? Did it go with the majority or with the decision in the
    meeting notes? Did it admit when the documents don't say, or fill the gap
    with general knowledge? In exercise 13 Copilot only had the user story:
    which of its questions for the product owner do these documents answer?
+8. Follow-up: ask Copilot to update support-faq.docx with the most likely correct
+   information. What does it do?
