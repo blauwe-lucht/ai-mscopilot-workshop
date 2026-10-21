@@ -254,8 +254,8 @@ or draws a plausible diagram from the project's name and README.
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
 
-1. Open `examples/delivery-date.md` and read the user story. Write down the
-   first five test cases you would want.
+1. Open `examples/simple-notebook/delivery-date.docx` and read the user
+   story. Write down the first five test cases you would want.
 2. Paste the user story into Copilot and ask: "Which unit tests should be
    implemented for this during development? Give them as a table with the
    input and the expected result."
@@ -394,3 +394,34 @@ the cause.
    Jackson BOM, an exclusion, declaring the dependency yourself) and explain
    which one is best? Did it suggest versions that don't exist? How long
    would you have searched for `JacksonFeature` yourself?
+
+---
+
+## Exercise 19: Asking questions about your own documents
+
+**Goal:** use a Copilot Notebook to answer questions from a set of project
+documents, and find out whether Copilot notices where they contradict each
+other.
+
+1. Create a notebook in Copilot and add the four Word documents in
+   `examples/simple-notebook` as references: the user story, the functional
+   design, the refinement meeting notes and the customer service FAQ. Skim
+   them for two minutes.
+2. Ask: "Look at the referenced documents. What is the cut-off time for same-day shipping?" Does Copilot give
+   one answer, or tell you the documents disagree? Does it say which
+   document each answer comes from?
+3. Ask: "Do premium customers get their order delivered on Sundays?" Three
+   documents say yes and one says no. Which answer does Copilot give, and
+   why?
+4. Ask: "Which documents contradict each other? Give a table with the
+   topic, what each document says, and which one is most likely correct."
+5. Ask a question the documents don't answer: "An order contains a sofa
+   and a phone charger. Are they delivered together or in two parcels?"
+6. Follow-up: "Write a short message to Jeroen, the product owner, listing
+   what has to be fixed in the user story, the functional design and the
+   FAQ."
+7. Compare: the documents contain at least five contradictions. How many
+   did Copilot find? Did it go with the majority or with the decision in the
+   meeting notes? Did it admit when the documents don't say, or fill the gap
+   with general knowledge? In exercise 13 Copilot only had the user story:
+   which of its questions for the product owner do these documents answer?
