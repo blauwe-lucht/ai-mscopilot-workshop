@@ -1,0 +1,4 @@
+Hi! Customer just called, she got an error at checkout yesterday around
+half past 5 🙈 Order went through in the end I think but she thinks she
+paid twice?? Order number 119196. Can you turn this into a bug? Log is
+attached. Thx!!

@@ -2,7 +2,7 @@
 
 set -xeuo pipefail
 
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/../../.."
 
 rm -rf ai-workshop-repos
 mkdir ai-workshop-repos

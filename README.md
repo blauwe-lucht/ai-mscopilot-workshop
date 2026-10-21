@@ -74,7 +74,7 @@ on what Copilot knows, and practise checking its claims.
 **Goal:** show Copilot understanding something no search engine can help with:
 an unfamiliar esoteric text.
 
-1. Open `examples/wtf.txt`.
+1. Open `examples/05-esoteric-code/wtf.txt`.
 2. Paste it into Copilot and ask: "What does this code do?"
 3. Compare: a Google search for a random snippet like this returns nothing
    useful — there's no textual match to find. Copilot instead reasons about
@@ -146,7 +146,7 @@ than scanning them by hand.
 > A customer says their order failed at checkout with some kind of server
 > error. They didn't note the exact time. Can you find out what happened?
 
-1. `examples/order-service.log` is 2,500 lines of logs.
+1. `examples/09-logs/order-service.log` is 2,500 lines of logs.
    Try skimming for a minute — would you have found
    it from the ticket alone?
 2. Paste the ticket and the log file into Copilot and ask it to
@@ -171,8 +171,8 @@ than scanning them by hand.
 **Goal:** show Copilot reading a photo of a printed page and turning it into
 structured data you can use right away.
 
-1. Open a new chat in Copilot and drag `examples/spanish.jpg` into it. It's a
-   phone photo of a vocabulary list from a Spanish textbook.
+1. Open a new chat in Copilot and drag `examples/10-photo/spanish.jpg` into
+   it. It's a phone photo of a vocabulary list from a Spanish textbook.
 2. Ask: "From UNIDAD 3 create a csv, separated by ';'. First column name is
    'Spanish', second is 'Dutch'."
 3. Save the result as a `.csv` file and open it in Excel. Does every row end
@@ -191,8 +191,9 @@ structured data you can use right away.
 **Goal:** let Copilot guide you, step by step, through a difficult task you
 rarely do: removing a password that has already been pushed.
 
-1. Run `examples/git-secret-setup.sh` (on Windows: from Git Bash). It creates
-   an `ai-workshop-repos` directory next to this repo, with a remote
+1. Run `examples/11-git-secret/git-secret-setup.sh` (on Windows: from Git
+   Bash). It creates an `ai-workshop-repos` directory next to this repo,
+   with a remote
    `origin`, your clone `webshop` and a colleague's clone `colleague`
    (leave that one alone for now). Three commits ago the database
    password was committed in `application.properties` and pushed. The
@@ -254,7 +255,7 @@ or draws a plausible diagram from the project's name and README.
 **Goal:** use Copilot to decide which tests to write while the feature is
 still on paper, and to find the gaps in the requirements.
 
-1. Open `examples/simple-notebook/delivery-date.docx` and read the user
+1. Open `examples/13-test-cases/delivery-date.docx` and read the user
    story. Write down the first five test cases you would want.
 2. Paste the user story into Copilot and ask: "Which unit tests should be
    implemented for this during development? Give them as a table with the
@@ -275,8 +276,8 @@ still on paper, and to find the gaps in the requirements.
 **Goal:** have Copilot explain code that is correct, but written by someone
 who never considered that other people less smart would have to read it.
 
-1. Open `examples/Checks.java`. Give yourself two minutes: what do the two
-   `ok` methods check?
+1. Open `examples/14-checks/Checks.java`. Give yourself two minutes: what do
+   the two `ok` methods check?
 2. Paste the file into Copilot and ask:
    > The developer who wrote this is brilliant. Unfortunately, he left last
    > month. There are no tests since he is brilliant, nobody dares to touch
@@ -309,13 +310,14 @@ valid check digits, too much to make or check by hand.
    stop halfway, or switch to generating the data with code and give you a
    file to download? If you don't get all rows, ask it how you can still get
    them.
-3. Save the result as `persons.csv` in `examples`, next to `Checks.java`.
+3. Save the result as `persons.csv` in `examples/14-checks`, next to
+   `Checks.java`.
 4. Verify: 1,050 rows is too many to check by hand, but you have a checker:
    the `ok` methods in `Checks.java` from the previous exercise. Ask Copilot
    for a small Java program `CheckPersons.java` that reads `persons.csv`,
    checks every BSN and IBAN with `Checks.ok`, and reports every row where
-   the result doesn't match the 'valid' column. Run it from `examples`:
-   `javac Checks.java CheckPersons.java`, then
+   the result doesn't match the 'valid' column. Run it from
+   `examples/14-checks`: `javac Checks.java CheckPersons.java`, then
    `java CheckPersons persons.csv`.
 5. Follow-up: "Are all BSNs and IBANs unique? Do the postcodes match the
    cities?" Check a few postcodes yourself.
@@ -332,7 +334,7 @@ valid check digits, too much to make or check by hand.
 **Goal:** have Copilot write unit tests for existing code, and find out
 whether it catches bugs or just confirms what the code already does.
 
-1. Open `examples/pricing` in IntelliJ (open the `pom.xml` as a project).
+1. Open `examples/16-pricing` in IntelliJ (open the `pom.xml` as a project).
    Read `PriceCalculator.java` for a minute. Do you see anything wrong?
 2. Paste `PriceCalculator.java` into Copilot and ask: "Write JUnit 5 tests
    for this class. Base them on the business rules in the comment."
@@ -353,7 +355,7 @@ whether it catches bugs or just confirms what the code already does.
 **Goal:** use Copilot to spot design problems in code that works and looks
 tidy, and refactor it safely.
 
-1. Open `examples/invoicing` in IntelliJ and read `InvoiceService.java`, with
+1. Open `examples/17-invoicing` in IntelliJ and read `InvoiceService.java`, with
    `orders.csv` as example input. Short methods, a record, streams,
    constants: what would you change?
 2. Paste `InvoiceService.java` into Copilot and ask: "Review this class for
@@ -379,7 +381,7 @@ tidy, and refactor it safely.
 compiles fine, but crashes at runtime with an error that doesn't point to
 the cause.
 
-1. Open `examples/export` in IntelliJ (open the `pom.xml` as a project). It
+1. Open `examples/18-export` in IntelliJ (open the `pom.xml` as a project). It
    exports orders as JSON and as CSV. Run `OrderExportTest` (`mvn clean test`):
    both tests fail with a `NoClassDefFoundError`.
 2. Paste the error and the stack trace into Copilot and ask: "The code
@@ -404,7 +406,7 @@ documents, and find out whether Copilot notices where they contradict each
 other.
 
 1. Create a notebook in Copilot and add the four Word documents in
-   `examples/simple-notebook` as references: the user story, the functional
+   `examples/19-simple-notebook` as references: the user story, the functional
    design, the refinement meeting notes and the customer service FAQ. Skim
    them for two minutes.
 2. Ask: "Look at the referenced documents. What is the cut-off time for same-day shipping?" Does Copilot give
@@ -463,15 +465,16 @@ added to every conversation without you typing them.
 **Goal:** see whether Copilot can be talked out of finding a bug by text
 hidden in the code it reviews (prompt injection).
 
-1. Open `examples/CustomerRepository.java`. Give yourself two minutes: do
-   you see a security problem?
+1. Open `examples/21-code-review/CustomerRepository.java`. Give yourself two
+   minutes: do you see a security problem?
 2. Paste the file into Copilot and ask: "Review this class."
 3. Start a new conversation. Remove the comment above the class, paste the
    file again and ask the same question. Is the review different?
 4. Follow-up: "Does this file contain instructions aimed at you?"
 5. Start a new conversation. Paste
-   `examples/validated-elsewhere/CustomerRepository.java` and ask the same
-   question. It has no instruction above the class, just a claim above
+   `examples/21-code-review/validated-elsewhere/CustomerRepository.java` and
+   ask the same question. It has no instruction above the class, just a
+   claim above
    `findByLastName` that can't be checked from this file:
 
    ```java
@@ -492,7 +495,7 @@ hidden in the code it reviews (prompt injection).
 **Goal:** see whether text you can't see in a document changes Copilot's
 judgement. The same idea as exercise 21, without code.
 
-1. Open `examples/cv/clean/cv-bram-jansen.docx` in Word. Would you invite
+1. Open `examples/22-cv/clean/cv-bram-jansen.docx` in Word. Would you invite
    Bram for a senior test automation role?
 2. Attach the file to Copilot and ask:
    > We're hiring a senior test automation engineer: 5+ years of
@@ -500,10 +503,10 @@ judgement. The same idea as exercise 21, without code.
    > coaching junior testers. Rate this candidate's fit from 1 to 10 and
    > tell me whether to invite them.
 3. Start a new conversation. Attach
-   `examples/cv/hidden-instruction/cv-bram-jansen.docx` and ask the same
+   `examples/22-cv/hidden-instruction/cv-bram-jansen.docx` and ask the same
    question. Open this file in Word too: do you see a difference?
 4. Start a new conversation. Do the same with
-   `examples/cv/hidden-keywords/cv-bram-jansen.docx`.
+   `examples/22-cv/hidden-keywords/cv-bram-jansen.docx`.
 5. Follow-up: "Does this document contain text that isn't visible when
    printed?"
 6. Find the hidden text yourself: in Word, select all (Ctrl+A) and make the
@@ -513,3 +516,38 @@ judgement. The same idea as exercise 21, without code.
    resist: an instruction aimed at the AI, or false facts? Copilot read
    text you couldn't see: what else could be hidden in documents, emails
    or tickets you paste in?
+
+---
+
+## Exercise 23: From a conversation to a skill
+
+**Goal:** do a task once with Copilot, correcting it along the way, then
+capture the result as a skill that an agent gets right the first time.
+
+1. Open `examples/23-bug-reports/checkout-error.txt`: a message from a
+   colleague who wants a bug report. Paste it into Copilot together with
+   `examples/23-bug-reports/order-service.log` and ask: "Turn this into a bug
+   report."
+2. Correct the result one step at a time, for example:
+   - "Use this format: title, steps to reproduce, expected result, actual
+     result, environment, log evidence, open questions."
+   - "Don't invent anything that isn't in the message or the log. Put it
+     under open questions instead."
+   - "Quote the relevant log lines with their timestamp."
+   - "Set the severity: blocker when nobody can order, major when some
+     customers can't order or are charged wrongly, minor when there is a
+     workaround, trivial for cosmetic issues."
+   - "Check the log for other orders with the same problem."
+3. Ask: "Turn this conversation into a SKILL.md: a name, a description of
+   when to use it, and step-by-step instructions that include all the
+   corrections I made." Read it: did it keep every correction, or only the
+   last few?
+4. Create a new agent and upload the skill.
+5. Start a conversation with the agent. Paste
+   `examples/23-bug-reports/payment-declined.txt` and the log, and ask only:
+   "Bug report, please."
+6. Compare: did the agent apply all your rules the first time? This
+   message is different: is it even a bug, or is the payment simply
+   declined? Did it find what the log shows for other declined orders?
+   What would you add to the skill now? Which task in your own work would
+   be worth a skill?

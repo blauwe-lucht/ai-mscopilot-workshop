@@ -32,7 +32,8 @@ hours).
 
 All exercise content lives in the top-level `README.md`, one section per
 exercise, until there's enough content to warrant splitting into separate
-files/folders — don't split preemptively.
+files/folders — don't split preemptively. Each exercise has its own folder
+in `examples/`, prefixed with its number; see [decisions.md](decisions.md).
 
 ## Working conventions
 
@@ -49,8 +50,8 @@ files/folders — don't split preemptively.
   mode, no access to the project). Exercises must work through the chat
   (browser, Edge sidebar or app): paste or attach code/files, and copy
   results back into the IDE by hand.
-- Exercises that need a Git scenario get a setup script in `examples/`
-  (e.g. `git-secret-setup.sh`), following the style of the
-  `git-advanced-workshop` repo: a bare `origin` plus a clone, commits
+- Exercises that need a Git scenario get a setup script in their exercise
+  folder (e.g. `examples/11-git-secret/git-secret-setup.sh`), following the
+  style of the `git-advanced-workshop` repo: a bare `origin` plus a clone, commits
   already pushed. The script creates `ai-workshop-repos/` *next to* this
   repo, never inside it, to avoid nested repos.
