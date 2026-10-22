@@ -529,24 +529,25 @@ capture the result as a skill that an agent gets right the first time.
    `examples/23-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
-   - "Use this format: title, steps to reproduce, expected result, actual
-     result, environment, log evidence, open questions."
+   - "Write the bug report in a format that I can directly upload to Jira."
    - "Don't invent anything that isn't in the message or the log. Put it
      under open questions instead."
    - "Quote the relevant log lines with their timestamp."
-   - "Set the severity: blocker when nobody can order, major when some
-     customers can't order or are charged wrongly, minor when there is a
-     workaround, trivial for cosmetic issues."
+   - "Set the priority: Highest when nobody can order, High when some
+     customers can't order or are charged wrongly, Medium when there is a
+     workaround, Low for cosmetic issues."
    - "Check the log for other orders with the same problem."
-3. Ask: "Turn this conversation into a SKILL.md: a name, a description of
-   when to use it, and step-by-step instructions that include all the
-   corrections I made." Read it: did it keep every correction, or only the
-   last few?
-4. Create a new agent and upload the skill.
-5. Start a conversation with the agent. Paste
+3. Ask: "Turn this conversation into a complete Copilot Studio SKILL.md file,
+   including valid YAML frontmatter. Call the skill 'jira-bug-report-writer'."
+4. Read the skill: did it keep every correction, or only the last few?
+5. Copy & paste the skill code into a file called SKILL.md, create a new agent
+   with these instructions: "Turn human input into a useful bug report that
+   can be imported into Jira. Use the skill jira-bug-report-writer."
+   Add the skill file you created.
+6. Start a conversation with the agent. Paste
    `examples/23-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
-6. Compare: did the agent apply all your rules the first time? This
+7. Compare: did the agent apply all your rules the first time? This
    message is different: is it even a bug, or is the payment simply
    declined? Did it find what the log shows for other declined orders?
    What would you add to the skill now? Which task in your own work would
