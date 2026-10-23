@@ -493,12 +493,44 @@ other.
 
 ---
 
-## Exercise 22: An agent that only speaks in rhyme
+## Exercise 22: An agent that coaches your prompts
+
+**Goal:** learn what an agent is and how to use one, with an agent built by
+Microsoft: Prompt Coach.
+
+In Copilot, an agent is Copilot with its own instructions, and sometimes
+its own knowledge and skills, for one specific task. You chat with it the
+same way as with Copilot, but it behaves differently without you asking.
+
+> Note: this is not what the rest of the AI world means by an agent. There,
+> an agent works towards a goal on its own: it makes a plan, uses tools
+> (runs code, edits files, searches, calls APIs), checks the result and
+> repeats until the job is done, without you prompting every step. A Copilot
+> agent is closer to a saved prompt with some files attached: it still
+> answers one message at a time.
+
+1. In Copilot, open **All agents**, find **Prompt Coach** under *Built by
+   Microsoft*, select it and press "Add". It now appears in the left panel under Agents.
+2. Start a conversation with Prompt Coach and paste a weak prompt: "Write
+   test cases for our login page." Does it coach you, or just answer?
+3. Start a new conversation with Prompt Coach and ask: "Help me improve
+   this prompt: 'Write test cases for our login page.'" Answer its
+   questions, then ask it to rewrite the prompt.
+4. Ask the Prompt Coach what its instructions are.
+5. Open a normal Copilot chat and ask the original prompt. Then, in a new
+   chat, ask the improved prompt. Compare the answers.
+6. Open a new Prompt Coach chat and select one of the predefined questions
+   below the prompt, for example 'How do I write a good prompt?'
+7. Ask Prompt Coach to improve a prompt you might use at work.
+
+---
+
+## Exercise 23: Create an agent that only speaks in rhyme
 
 **Goal:** see what an agent in Copilot really is: instructions that are
 added to every conversation without you typing them.
 
-1. Create an agent in Copilot. Give it this
+1. Create an agent in Copilot. In the Agent Builder give it this
    instruction:
    > Answer every question in rhyme, like a Sinterklaas poem. Keep the
    > content correct and complete. Name the agent "Sinterklaas".
@@ -519,14 +551,14 @@ added to every conversation without you typing them.
 
 ---
 
-## Exercise 23: From a conversation to a skill
+## Exercise 24: From a conversation to a skill
 
 **Goal:** do a task once with Copilot, correcting it along the way, then
 capture the result as a skill that an agent gets right the first time.
 
-1. Open `examples/23-bug-reports/checkout-error.txt`: a message from a
+1. Open `examples/24-bug-reports/checkout-error.txt`: a message from a
    colleague who wants a bug report. Add it to a new Copilot chat together with
-   `examples/23-bug-reports/order-service.log` and ask: "Turn this into a bug
+   `examples/24-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
    - "Write the bug report in a format that I can directly upload to Jira."
@@ -548,7 +580,7 @@ capture the result as a skill that an agent gets right the first time.
    can be imported into Jira. Use the skill jira-bug-report-writer."
    Add the skill file you created and press the 'Create' button.
 6. Start a conversation with the agent. Paste
-   `examples/23-bug-reports/payment-declined.txt` and the log, and ask only:
+   `examples/24-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
 7. Compare: did the agent apply all your rules the first time? The second
    bug is different: is it even a bug, or is the payment simply

@@ -51,6 +51,9 @@ Planned work is in [todo.md](todo.md).
   mode, no access to the project). Exercises must work through the chat
   (browser, Edge sidebar or app): paste or attach code/files, and copy
   results back into the IDE by hand.
+- A Copilot "agent" is a saved set of instructions plus optional knowledge
+  and skills, not an autonomous agent that plans and uses tools. Exercises
+  must not suggest otherwise.
 - Exercises that need a Git scenario get a setup script in their exercise
   folder (e.g. `examples/11-git-secret/git-secret-setup.sh`), following the
   style of the `git-advanced-workshop` repo: a bare `origin` plus a clone, commits
