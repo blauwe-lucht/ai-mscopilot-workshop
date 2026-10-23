@@ -1,0 +1,11 @@
+As a customer, I want to see the expected delivery date before I pay, so that I know whether my order arrives in time.
+
+As a user I want a button.
+
+As the system, I want to store orders in a PostgreSQL table, so that orders are stored.
+
+I want to filter orders by date, so that I can find old orders faster.
+
+As a support agent, I want to search customers by name and export the results to Excel and email them to my manager, so that I can help customers.
+
+Als klant wil ik mijn wachtwoord kunnen resetten, zodat ik weer kan inloggen.

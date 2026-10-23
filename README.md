@@ -489,7 +489,7 @@ uses it, but few people can explain how a car or phone knows where it is.
 
 ---
 
-## Exercise 22: Asking questions about your own documents
+## Exercise 22: Introduction to notebooks
 
 **Goal:** use a Copilot Notebook to answer questions from a set of project
 documents, and find out whether Copilot notices where they contradict each
@@ -524,7 +524,7 @@ other.
 
 ---
 
-## Exercise 23: An agent that coaches your prompts
+## Exercise 23: Introduction to agents
 
 **Goal:** learn what an agent is and how to use one, with an agent built by
 Microsoft: Prompt Coach.
@@ -556,7 +556,7 @@ same way as with Copilot, but it behaves differently without you asking.
 
 ---
 
-## Exercise 24: Create an agent that only speaks in rhyme
+## Exercise 24: Creating a new agent
 
 **Goal:** see what an agent in Copilot really is: instructions that are
 added to every conversation without you typing them.
@@ -582,14 +582,50 @@ added to every conversation without you typing them.
 
 ---
 
-## Exercise 25: From a conversation to a skill
+## Exercise 25: Introduction to skills
+
+**Goal:** see what a skill is and how it differs from an agent's
+instructions.
+
+An agent's instructions apply to every message. A skill is a separate set
+of instructions with a name and a description, and the agent only uses it
+when your question matches the name of skill.
+
+1. Open `examples/25-user-story-checker/user-story-checker/SKILL.md` and
+   read it for two minutes. What is in the frontmatter between the `---`
+   lines, and what is in the rest of the file? What is the description
+   for?
+2. Create a new agent by selecting "Agents" and clicking "New agent".
+   Press "Skip" to manually create a new agent. Name the agent
+   "Refinement assistant" and enter this for the description
+   and instructions:
+   "Help a software development team prepare user stories for refinement."
+   Under **Skills** select "Add" and drag the
+   `SKILL.md` file into it. Then create the agent by pressing "Create".
+3. Start a conversation with the agent and ask a question that doesn't
+   need the skill: "What's the difference between a user story and a use
+   case?" Do you get a normal answer, or a user story check?
+4. Paste the stories from `examples/25-user-story-checker/stories.txt`
+   one at a time, without explaining what you want. Does the agent start
+   with a **User story check** table? If not, figure out how to trigger
+   the skill. Which problems does it find, and does
+   it handle the Dutch user story?
+5. Reflection: why did the agent use the skill without having been told
+   explicitly to do so?
+6. Compare: what is the difference between the skill and the agent's
+   instructions? When would you
+   put something in a skill instead of in the instructions?
+
+---
+
+## Exercise 26: From a conversation to a skill
 
 **Goal:** do a task once with Copilot, correcting it along the way, then
 capture the result as a skill that an agent gets right the first time.
 
-1. Open `examples/25-bug-reports/checkout-error.txt`: a message from a
+1. Open `examples/26-bug-reports/checkout-error.txt`: a message from a
    colleague who wants a bug report. Add it to a new Copilot chat together with
-   `examples/25-bug-reports/order-service.log` and ask: "Turn this into a bug
+   `examples/26-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
    - "Write the bug report in a format that I can directly upload to Jira."
@@ -611,7 +647,7 @@ capture the result as a skill that an agent gets right the first time.
    can be imported into Jira. Use the skill jira-bug-report-writer."
    Add the skill file you created and press the 'Create' button.
 6. Start a conversation with the agent. Paste
-   `examples/25-bug-reports/payment-declined.txt` and the log, and ask only:
+   `examples/26-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
 7. Compare: did the agent apply all your rules the first time? The second
    bug is different: is it even a bug, or is the payment simply
