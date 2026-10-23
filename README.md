@@ -458,14 +458,45 @@ judgement. The same idea as exercise 19, without code.
 
 ---
 
-## Exercise 21: Asking questions about your own documents
+## Exercise 21: AI-assisted learning
+
+**Goal:** use Copilot as a tutor that first explains and then quizzes you.
+
+Pick a subject you know little about but would like to understand, and
+adapt the prompts below to it. The steps below use GPS as an example: everyone
+uses it, but few people can explain how a car or phone knows where it is.
+
+1. Ask Copilot to explain the basics at your level: "I'm a software tester
+   without a physics background. Explain how GPS determines my location, in
+   five minutes of reading."
+2. Follow-up: "Explain it again as if I'm ten years old." Then: "Now as if
+   I'm a physics student." What changes, apart from the words?
+3. Ask more follow-up questions if certains aspects are not clear yet.
+4. Get quizzed: "Ask me five questions about this, one at a time. Wait for
+   my answer before asking the next one, and explain what I got wrong at
+   the end."
+5. Explain it back: "I'm going to explain in my own words why GPS needs at
+   least four satellites. Correct me where I'm wrong."
+6. Practise: "Give me a small puzzle I can work out in five minutes, then
+   check my answer." For GPS you might get: how far off is your position if
+   a satellite clock is one millionth of a second wrong?
+7. Verify: check two things Copilot taught you against an independent
+   source, such as <https://www.gps.gov> for GPS. Also ask Copilot for its
+   sources: do they say what Copilot claims?
+8. Compare: what stuck better, reading the explanation or being quizzed?
+   Did Copilot ever accept a wrong answer as right? On a subject you didn't
+   know, how would you have noticed if it taught you something wrong?
+
+---
+
+## Exercise 22: Asking questions about your own documents
 
 **Goal:** use a Copilot Notebook to answer questions from a set of project
 documents, and find out whether Copilot notices where they contradict each
 other.
 
 1. Create a notebook in Copilot and add the four Word documents in
-   `examples/21-simple-notebook` as references: the user story, the functional
+   `examples/22-simple-notebook` as references: the user story, the functional
    design, the refinement meeting notes and the customer service FAQ. Skim
    them for two minutes.
 2. Ask: "Look at the referenced documents. What is the cut-off time for same-day shipping?" Does Copilot give
@@ -493,7 +524,7 @@ other.
 
 ---
 
-## Exercise 22: An agent that coaches your prompts
+## Exercise 23: An agent that coaches your prompts
 
 **Goal:** learn what an agent is and how to use one, with an agent built by
 Microsoft: Prompt Coach.
@@ -525,7 +556,7 @@ same way as with Copilot, but it behaves differently without you asking.
 
 ---
 
-## Exercise 23: Create an agent that only speaks in rhyme
+## Exercise 24: Create an agent that only speaks in rhyme
 
 **Goal:** see what an agent in Copilot really is: instructions that are
 added to every conversation without you typing them.
@@ -551,14 +582,14 @@ added to every conversation without you typing them.
 
 ---
 
-## Exercise 24: From a conversation to a skill
+## Exercise 25: From a conversation to a skill
 
 **Goal:** do a task once with Copilot, correcting it along the way, then
 capture the result as a skill that an agent gets right the first time.
 
-1. Open `examples/24-bug-reports/checkout-error.txt`: a message from a
+1. Open `examples/25-bug-reports/checkout-error.txt`: a message from a
    colleague who wants a bug report. Add it to a new Copilot chat together with
-   `examples/24-bug-reports/order-service.log` and ask: "Turn this into a bug
+   `examples/25-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
    - "Write the bug report in a format that I can directly upload to Jira."
@@ -580,7 +611,7 @@ capture the result as a skill that an agent gets right the first time.
    can be imported into Jira. Use the skill jira-bug-report-writer."
    Add the skill file you created and press the 'Create' button.
 6. Start a conversation with the agent. Paste
-   `examples/24-bug-reports/payment-declined.txt` and the log, and ask only:
+   `examples/25-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
 7. Compare: did the agent apply all your rules the first time? The second
    bug is different: is it even a bug, or is the payment simply
