@@ -498,7 +498,7 @@ other.
 **Goal:** learn what an agent is and how to use one, with an agent built by
 Microsoft: Prompt Coach.
 
-In Copilot, an agent is Copilot with its own instructions, and sometimes
+In Copilot, an agent is a chat with its own instructions, and sometimes
 its own knowledge and skills, for one specific task. You chat with it the
 same way as with Copilot, but it behaves differently without you asking.
 
