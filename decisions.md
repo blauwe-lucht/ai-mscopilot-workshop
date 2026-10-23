@@ -6,3 +6,6 @@
 - **Example folders are prefixed with the two-digit exercise number**
   (e.g. `examples/09-logs`), so they sort in exercise order and it's clear
   which exercise a file belongs to.
+- **Exercises in a regular Copilot chat come first**, before exercises that
+  use other Copilot features (notebooks, agents, skills), so attendees get
+  comfortable with the chat before the interface changes.
