@@ -525,7 +525,7 @@ judgement. The same idea as exercise 21, without code.
 capture the result as a skill that an agent gets right the first time.
 
 1. Open `examples/23-bug-reports/checkout-error.txt`: a message from a
-   colleague who wants a bug report. Paste it into Copilot together with
+   colleague who wants a bug report. Add it to a new Copilot chat together with
    `examples/23-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
@@ -540,15 +540,24 @@ capture the result as a skill that an agent gets right the first time.
 3. Ask: "Turn this conversation into a complete Copilot Studio SKILL.md file,
    including valid YAML frontmatter. Call the skill 'jira-bug-report-writer'."
 4. Read the skill: did it keep every correction, or only the last few?
-5. Copy & paste the skill code into a file called SKILL.md, create a new agent
-   with these instructions: "Turn human input into a useful bug report that
+5. Copy & paste the skill code into a file on your computer called SKILL.md,
+   create a new agent. Press 'Skip' on the first page to manually create the
+   agent instead of telling Copilot what kind of agent to design. Name it
+   "Jira bug report creator", give it a description and give it
+   these instructions: "Turn human input into a useful bug report that
    can be imported into Jira. Use the skill jira-bug-report-writer."
-   Add the skill file you created.
+   Add the skill file you created and press the 'Create' button.
 6. Start a conversation with the agent. Paste
    `examples/23-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
-7. Compare: did the agent apply all your rules the first time? This
-   message is different: is it even a bug, or is the payment simply
+7. Compare: did the agent apply all your rules the first time? The second
+   bug is different: is it even a bug, or is the payment simply
    declined? Did it find what the log shows for other declined orders?
+8. Follow-up: if the bug report is not good enough or it doesn't import correctly
+   into Jira (try it!), change the skill (manually
+   or by asking Copilot) and repeat steps 3-7 until step 6 results in a useful
+   bug report.
+9. Reflection: what kind of skill is this, a personal, project, team or company skill?
+   How could you narrow or broaden the scope of this skill?
    What would you add to the skill now? Which task in your own work would
-   be worth a skill?
+   be worth a skill? What is a good place to store those four different kinds of skills?

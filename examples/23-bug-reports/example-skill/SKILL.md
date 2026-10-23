@@ -2,7 +2,8 @@
 name: "jira-bug-report-writer"
 description: >
   Converts informal customer reports, support tickets, emails, chat messages,
-  and application logs into evidence-based Jira bug reports. Produces factual
+  and application logs into evidence-based bug reports that can be directly
+  imported into Jira. Produces factual
   bug reports, quotes relevant log lines with timestamps, searches for similar
   failures in supplied logs, assigns priorities according to defined rules,
   and moves unsupported assumptions into an Open Questions section.
@@ -12,7 +13,7 @@ description: >
 
 ## Purpose
 
-Convert an informal problem report and supporting evidence into a bug report that can be imported into Jira.
+Convert an informal problem report and supporting evidence into a bug report that can be directly imported into Jira.
 
 The resulting bug report must be suitable for immediate import into Jira and must distinguish clearly between:
 
@@ -243,14 +244,7 @@ Open Questions:
 - What is the customer impact?
 ```
 
-Use:
-
-```text
-Priority:
-Medium
-```
-
-until triaged.
+Use priority `Medium` until triaged.
 
 ---
 
@@ -356,30 +350,58 @@ Open Questions:
 
 # Jira Output Format
 
-Produce output using the following template.
+Produce a CSV file for Jira's CSV import: one header row and one row per
+bug report.
 
-```text
-Issue Type: Bug
+Output only the CSV, in a single code block marked `csv`, so the user can
+save it as a `.csv` file without editing it.
 
-Summary:
-<short factual summary>
+## Columns
 
-Priority:
-<Highest|High|Medium|Low>
+Use exactly these columns, in this order:
 
-Description:
-<reported facts only>
+```csv
+"Summary","Issue Type","Priority","Description"
+```
 
-Relevant Log Entries:
-<exact log entries with timestamps>
+- **Summary**: short factual summary, one line.
+- **Issue Type**: always `Bug`.
+- **Priority**: exactly one of `Highest`, `High`, `Medium`, `Low`.
+- **Description**: the rest of the report, in plain text, with these
+  sections in this order: reported facts, affected identifiers, relevant
+  log entries, open questions.
 
-Open Questions:
-- ...
-- ...
-- ...
+## CSV Rules
 
-Affected Order:
-<order id>
+Jira rejects or mangles rows that break these rules:
+
+- Separate fields with a comma.
+- Wrap every field in double quotes, including the header.
+- Write a double quote inside a field as two double quotes (`""`).
+- Line breaks are allowed inside a quoted field; use them to separate the
+  sections of the description.
+- Don't add empty lines between rows or after the last row.
+- Don't use Markdown in the fields: no `**`, no backticks, no tables.
+
+## Example
+
+```csv
+"Summary","Issue Type","Priority","Description"
+"Checkout error reported for order 119196","Bug","High","Reported facts:
+A customer called the reporter. She received an error at checkout ""yesterday around half past 5"". According to the reporter, the order went through in the end. The customer believes she paid twice.
+
+Affected identifiers:
+- Order 119196
+
+Relevant log entries:
+2026-09-14 17:34:14 WARN  db.pool - connection pool usage: 20/20 checked out, requests queuing
+2026-09-14 17:34:45 ERROR order-service - Failed to process order 119196
+2026-09-14 17:34:55 INFO  order-service - retrying order 119196
+2026-09-14 17:34:56 INFO  order-service - Order 119196 processed in 123ms
+
+Open questions:
+- Was the customer charged once or multiple times?
+- What error was displayed to the customer?"
 ```
 
 ---
@@ -440,4 +462,6 @@ Before returning the Jira ticket, verify:
 - [ ] No reproduction steps are invented
 - [ ] No user-facing error messages are invented
 - [ ] No platform metadata remains
-- [ ] The output is immediately usable in Jira
+- [ ] The output is a single CSV code block with the header
+      `"Summary","Issue Type","Priority","Description"`
+- [ ] Every field is quoted and inner double quotes are doubled
