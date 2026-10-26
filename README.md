@@ -399,7 +399,7 @@ the cause.
 
 ---
 
-## Exercise 19: Code that tells the reviewer it's fine (prompt injection for coders)
+## Exercise 19: This code is fine! (prompt injection for coders)
 
 **Goal:** see whether Copilot can be talked out of finding a bug by text
 hidden in the code it reviews (prompt injection).
@@ -660,3 +660,41 @@ capture the result as a skill that an agent gets right the first time.
    How could you narrow or broaden the scope of this skill?
    What would you add to the skill now? Which task in your own work would
    be worth a skill? What is a good place to store those four different kinds of skills?
+
+---
+
+## Exercise 27: Let Copilot be your copilot
+
+**Goal:** find out which of your own work Copilot can help with, or take
+over.
+
+1. Look back at the last two weeks: your calendar, sent mail, Teams chats,
+   Jira tickets, commits, meetings, conversations. Write down ten things
+   you spent time on, with
+   a rough estimate of the hours. Leave out confidential details.
+2. Mark each activity: could Copilot take it over, help with it, or not
+   help at all? Use the exercises of today as a reference.
+3. Paste your list of activities into Copilot and ask: "Which of these
+   activities could you help me with, and how? Be honest about what you can't do."
+4. Compare Copilot's answer with your own marks. Where was Copilot more
+   optimistic than you, and where less?
+5. Pick the activity with the most to gain and try it now with Copilot.
+6. Reflection: which activity will you do differently from tomorrow on? What
+   would you never hand over to Copilot, and why?
+
+---
+
+## You're done, now what?
+
+Done with all exercises while others are still busy? Explore the rest of
+Copilot on your own:
+
+1. Click around in Copilot: the menus, the settings, the left panel,
+   everywhere. Look for features and options that none
+   of the exercises cover.
+2. For each one you find, ask Copilot what it does and when you would use
+   it.
+3. Try it yourself: does it work the way Copilot said? What is it useful for,
+   what are the limitations?
+4. Write down your most useful finds and share them at the end of the
+   session.
