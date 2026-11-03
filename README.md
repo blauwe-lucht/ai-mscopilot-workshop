@@ -2,34 +2,37 @@
 
 ## Index
 
-1. [A better interface for web search](#exercise-1-a-better-interface-for-web-search)
-2. [Something Google does better](#exercise-2-something-google-does-better)
-3. [Asking Copilot how to break its own rules](#exercise-3-asking-copilot-how-to-break-its-own-rules)
-4. [A question that needs checking](#exercise-4-a-question-that-needs-checking)
-5. [Reading something you can't read](#exercise-5-reading-something-you-cant-read)
-6. [You don't need English](#exercise-6-you-dont-need-english)
-7. [A replacement for that app you downloaded once](#exercise-7-a-replacement-for-that-app-you-downloaded-once)
-8. [Skipping the blank sheet](#exercise-8-skipping-the-blank-sheet)
-9. [Making sense of a wall of logs](#exercise-9-making-sense-of-a-wall-of-logs)
-10. [From a photo to a spreadsheet](#exercise-10-from-a-photo-to-a-spreadsheet)
-11. [Getting a password out of Git history](#exercise-11-getting-a-password-out-of-git-history)
-12. [A class diagram from a GitHub link](#exercise-12-a-class-diagram-from-a-github-link)
-13. [Test cases before there is code](#exercise-13-test-cases-before-there-is-code)
-14. [Code written by a genius](#exercise-14-code-written-by-a-genius)
-15. [A thousand test persons](#exercise-15-a-thousand-test-persons)
-16. [Tests for code nobody tested](#exercise-16-tests-for-code-nobody-tested)
-17. [Reviewing and refactoring code that looks fine](#exercise-17-reviewing-and-refactoring-code-that-looks-fine)
-18. [It compiles, but it doesn't run](#exercise-18-it-compiles-but-it-doesnt-run)
-19. [This code is fine! (prompt injection for coders)](#exercise-19-this-code-is-fine-prompt-injection-for-coders)
-20. [A CV with something to hide (prompt injection for non-coders)](#exercise-20-a-cv-with-something-to-hide-prompt-injection-for-non-coders)
-21. [AI-assisted learning](#exercise-21-ai-assisted-learning)
-22. [Plan first, then do the work](#exercise-22-plan-first-then-do-the-work)
-23. [Introduction to notebooks](#exercise-23-introduction-to-notebooks)
-24. [Introduction to agents](#exercise-24-introduction-to-agents)
-25. [Creating a new agent](#exercise-25-creating-a-new-agent)
-26. [Introduction to skills](#exercise-26-introduction-to-skills)
-27. [From a conversation to a skill](#exercise-27-from-a-conversation-to-a-skill)
-28. [Let Copilot be your copilot](#exercise-28-let-copilot-be-your-copilot)
+- [AI Workshop — Exercises](#ai-workshop--exercises)
+  - [Index](#index)
+  - [Exercise 1: A better interface for web search](#exercise-1-a-better-interface-for-web-search)
+  - [Exercise 2: Something Google does better](#exercise-2-something-google-does-better)
+  - [Exercise 3: Asking Copilot how to break its own rules](#exercise-3-asking-copilot-how-to-break-its-own-rules)
+  - [Exercise 4: A question that needs checking](#exercise-4-a-question-that-needs-checking)
+  - [Exercise 5: Reading something you can't read](#exercise-5-reading-something-you-cant-read)
+  - [Exercise 6: You don't need English](#exercise-6-you-dont-need-english)
+  - [Exercise 7: A replacement for that app you downloaded once](#exercise-7-a-replacement-for-that-app-you-downloaded-once)
+  - [Exercise 8: Skipping the blank sheet](#exercise-8-skipping-the-blank-sheet)
+  - [Exercise 9: Making sense of a wall of logs](#exercise-9-making-sense-of-a-wall-of-logs)
+  - [Exercise 10: From a photo to a spreadsheet](#exercise-10-from-a-photo-to-a-spreadsheet)
+  - [Exercise 11: Getting a password out of Git history](#exercise-11-getting-a-password-out-of-git-history)
+  - [Exercise 12: A class diagram from a GitHub link](#exercise-12-a-class-diagram-from-a-github-link)
+  - [Exercise 13: Test cases before there is code](#exercise-13-test-cases-before-there-is-code)
+  - [Exercise 14: Code written by a genius](#exercise-14-code-written-by-a-genius)
+  - [Exercise 15: A thousand test persons](#exercise-15-a-thousand-test-persons)
+  - [Exercise 16: Tests for code nobody tested](#exercise-16-tests-for-code-nobody-tested)
+  - [Exercise 17: Reviewing and refactoring code that looks fine](#exercise-17-reviewing-and-refactoring-code-that-looks-fine)
+  - [Exercise 18: It compiles, but it doesn't run](#exercise-18-it-compiles-but-it-doesnt-run)
+  - [Exercise 19: This code is fine! (prompt injection for coders)](#exercise-19-this-code-is-fine-prompt-injection-for-coders)
+  - [Exercise 20: A CV with something to hide (prompt injection for non-coders)](#exercise-20-a-cv-with-something-to-hide-prompt-injection-for-non-coders)
+  - [Exercise 21: AI-assisted learning](#exercise-21-ai-assisted-learning)
+  - [Exercise 22: Plan first, then do the work](#exercise-22-plan-first-then-do-the-work)
+  - [Exercise 23: Introduction to notebooks](#exercise-23-introduction-to-notebooks)
+  - [Exercise 24: Introduction to agents](#exercise-24-introduction-to-agents)
+  - [Exercise 25: Creating a new agent](#exercise-25-creating-a-new-agent)
+  - [Exercise 26: Introduction to skills](#exercise-26-introduction-to-skills)
+  - [Exercise 27: From a conversation to a skill](#exercise-27-from-a-conversation-to-a-skill)
+  - [Exercise 28: Let Copilot be your copilot](#exercise-28-let-copilot-be-your-copilot)
+  - [You're done, now what?](#youre-done-now-what)
 
 [You're done, now what?](#youre-done-now-what)
 
@@ -531,16 +534,23 @@ the work is done instead of fixing it afterwards.
 
 Copilot has no plan mode, but you can ask for one in your prompt.
 
-> Note: use Microsoft Edge. Copilot shows the page in a canvas next to the
-> chat, and that preview is blocked in other browsers. Choose a
-> sensitivity label when Copilot asks for one.
+A canvas is a panel next to the chat where Copilot builds something you
+keep working on, such as a web page. Instead of a new answer in the chat
+each time, Copilot updates the same page with every follow-up. For a web
+page, the canvas shows the code and runs the application.
 
-1. Start a new chat and ask straight away: "Create a web page in HTML, CSS
-   and JavaScript that picks who goes first at our daily stand-up." In the
+> Note: use Microsoft Edge. Other browsers block the preview in the canvas.
+> Choose a sensitivity label when Copilot asks for one.
+
+1. Start a new chat and ask straight away:
+   > Create a canvas with a web page in HTML, CSS
+   > and JavaScript that picks who goes first at our daily stand-up.
+
+   In the
    canvas, look at both the code and the running application. Keep it for
    step 7.
 2. Start another new chat and ask for a plan first:
-   > I want a web page that picks who goes first at our daily stand-up. Use
+   > I want a canvas with a web page that picks who goes first at our daily stand-up. Use
    > HTML, CSS and JavaScript. Don't write any code yet. First ask me the
    > questions you need answered. Then propose a step-by-step plan,
    > including what the page will look like. Wait for my approval before
