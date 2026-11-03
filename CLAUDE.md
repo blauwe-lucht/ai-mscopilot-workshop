@@ -17,8 +17,8 @@ workshop has two parts:
    demonstration and hands-on exercises.
 
 Audience: mixed developers and testers at a Dutch company, so Dutch-specific
-examples (IBAN, BSN, Dutch text) work well. Format: half-day session (~3-4
-hours).
+examples (IBAN, BSN, Dutch text) work well. Format: a series of
+sessions, number still open; exercises are not limited by time.
 
 ## What lives in this repo
 

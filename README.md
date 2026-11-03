@@ -534,41 +534,52 @@ the work is done instead of fixing it afterwards.
 
 Copilot has no plan mode, but you can ask for one in your prompt.
 
-A canvas is a panel next to the chat where Copilot builds something you
-keep working on, such as a web page. Instead of a new answer in the chat
-each time, Copilot updates the same page with every follow-up. For a web
-page, the canvas shows the code and runs the application.
+A *canvas* (also called *page*) is a panel next to the chat where Copilot
+builds something you keep working on, such as a web page. Instead of a new
+answer in the chat each time, Copilot updates the same canvas with every
+follow-up. For a web page, the canvas shows the code and runs the
+application.
 
 > Note: use Microsoft Edge. Other browsers block the preview in the canvas.
 > Choose a sensitivity label when Copilot asks for one.
 
 1. Start a new chat and ask straight away:
-   > Create a canvas with a web page in HTML, CSS
-   > and JavaScript that picks who goes first at our daily stand-up.
+   > Create a canvas with a web page in HTML, CSS and JavaScript that picks
+   > who goes first at our daily stand-up.
 
-   In the
-   canvas, look at both the code and the running application. Keep it for
-   step 7.
+   In the canvas, look at both the code and the running application. Keep
+   it for step 7.
 2. Start another new chat and ask for a plan first:
-   > I want a canvas with a web page that picks who goes first at our daily stand-up. Use
-   > HTML, CSS and JavaScript. Don't write any code yet. First ask me the
-   > questions you need answered. Then propose a step-by-step plan,
-   > including what the page will look like. Wait for my approval before
-   > you start.
+   > I want a canvas with a web page that picks who goes first at our daily
+   > stand-up. Use HTML, CSS and JavaScript. Don't write any code yet.
+   > First ask me the questions you need answered. Then propose a
+   > step-by-step plan, including what the web page will look like. Wait
+   > for my approval before you start.
 3. Answer its questions, change the plan where you disagree, and approve it.
 4. Follow-up: "Carry out step 1 only." In the canvas, read the code, then
    try the application. Only ask for the next step when it works.
 5. Change your mind halfway, e.g. "Someone is on holiday today." Does
    Copilot update the plan, or just patch the code?
-6. When all steps are done, ask: "Export the page as a single HTML file
+6. When all steps are done, ask: "Export the web page as a single HTML file
    with the CSS and JavaScript included." The canvas has no export or
    download option, so copy the code into a file named `standup.html` and
    open it in your browser. Does it still work outside Copilot?
-7. Compare: put both pages side by side. What did the first page assume
-   that the plan made explicit (where the names come from, whether they're
-   remembered, whether absent people can be skipped, a wheel or a list)?
-   Did Copilot borrow anything from your earlier chats? When is planning
-   first worth the extra time, and when is it overkill?
+7. Compare: put both applications side by side. What did the first one
+   assume that the plan made explicit (where the names come from, whether
+   they're remembered, whether absent people can be skipped, a wheel or a
+   list)? Did Copilot borrow anything from your earlier chats? When is
+   planning first worth the extra time, and when is it overkill?
+8. Follow-up: in the chat with the plan, ask:
+   > Create a prompt for a new Copilot chat so it will create the exact
+   > same application.
+
+   Start a new chat, paste the prompt and compare the result with the
+   planned application. Is it exactly the same?
+9. Reflect: what is the best way to get an application exactly right, and
+   to get it again: the prompt, the plan, or the exported HTML file?
+10. Try it yourself: come up with an application that you or your team can
+    use daily or weekly and have Copilot implement it the way you want it.
+    Share the application with your team.
 
 ---
 
