@@ -32,7 +32,8 @@ hours).
 
 All exercise content lives in the top-level `README.md`, one section per
 exercise, until there's enough content to warrant splitting into separate
-files/folders — don't split preemptively. Each exercise has its own folder
+files/folders — don't split preemptively. The index at the top of
+`README.md` lists every exercise; keep it in sync. Each exercise has its own folder
 in `examples/`, prefixed with its number; see [decisions.md](decisions.md).
 Planned work is in [todo.md](todo.md).
 

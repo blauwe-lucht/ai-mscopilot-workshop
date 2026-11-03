@@ -1,5 +1,40 @@
 # AI Workshop — Exercises
 
+## Index
+
+1. [A better interface for web search](#exercise-1-a-better-interface-for-web-search)
+2. [Something Google does better](#exercise-2-something-google-does-better)
+3. [Asking Copilot how to break its own rules](#exercise-3-asking-copilot-how-to-break-its-own-rules)
+4. [A question that needs checking](#exercise-4-a-question-that-needs-checking)
+5. [Reading something you can't read](#exercise-5-reading-something-you-cant-read)
+6. [You don't need English](#exercise-6-you-dont-need-english)
+7. [A replacement for that app you downloaded once](#exercise-7-a-replacement-for-that-app-you-downloaded-once)
+8. [Skipping the blank sheet](#exercise-8-skipping-the-blank-sheet)
+9. [Making sense of a wall of logs](#exercise-9-making-sense-of-a-wall-of-logs)
+10. [From a photo to a spreadsheet](#exercise-10-from-a-photo-to-a-spreadsheet)
+11. [Getting a password out of Git history](#exercise-11-getting-a-password-out-of-git-history)
+12. [A class diagram from a GitHub link](#exercise-12-a-class-diagram-from-a-github-link)
+13. [Test cases before there is code](#exercise-13-test-cases-before-there-is-code)
+14. [Code written by a genius](#exercise-14-code-written-by-a-genius)
+15. [A thousand test persons](#exercise-15-a-thousand-test-persons)
+16. [Tests for code nobody tested](#exercise-16-tests-for-code-nobody-tested)
+17. [Reviewing and refactoring code that looks fine](#exercise-17-reviewing-and-refactoring-code-that-looks-fine)
+18. [It compiles, but it doesn't run](#exercise-18-it-compiles-but-it-doesnt-run)
+19. [This code is fine! (prompt injection for coders)](#exercise-19-this-code-is-fine-prompt-injection-for-coders)
+20. [A CV with something to hide (prompt injection for non-coders)](#exercise-20-a-cv-with-something-to-hide-prompt-injection-for-non-coders)
+21. [AI-assisted learning](#exercise-21-ai-assisted-learning)
+22. [Plan first, then do the work](#exercise-22-plan-first-then-do-the-work)
+23. [Introduction to notebooks](#exercise-23-introduction-to-notebooks)
+24. [Introduction to agents](#exercise-24-introduction-to-agents)
+25. [Creating a new agent](#exercise-25-creating-a-new-agent)
+26. [Introduction to skills](#exercise-26-introduction-to-skills)
+27. [From a conversation to a skill](#exercise-27-from-a-conversation-to-a-skill)
+28. [Let Copilot be your copilot](#exercise-28-let-copilot-be-your-copilot)
+
+[You're done, now what?](#youre-done-now-what)
+
+---
+
 ## Exercise 1: A better interface for web search
 
 **Goal:** compare a Google search against asking Copilot directly.
