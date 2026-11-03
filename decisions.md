@@ -9,3 +9,6 @@
 - **Exercises in a regular Copilot chat come first**, before exercises that
   use other Copilot features (notebooks, agents, skills), so attendees get
   comfortable with the chat before the interface changes.
+- **Web page exercises ask for HTML, CSS and JavaScript and run in Microsoft
+  Edge.** Copilot previews the page in a canvas, which other browsers block,
+  and the result is easy to export as a single HTML file and run locally.

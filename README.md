@@ -489,14 +489,52 @@ uses it, but few people can explain how a car or phone knows where it is.
 
 ---
 
-## Exercise 22: Introduction to notebooks
+## Exercise 22: Plan first, then do the work
+
+**Goal:** make Copilot plan before it starts, so you can steer it before
+the work is done instead of fixing it afterwards.
+
+Copilot has no plan mode, but you can ask for one in your prompt.
+
+> Note: use Microsoft Edge. Copilot shows the page in a canvas next to the
+> chat, and that preview is blocked in other browsers. Choose a
+> sensitivity label when Copilot asks for one.
+
+1. Start a new chat and ask straight away: "Create a web page in HTML, CSS
+   and JavaScript that picks who goes first at our daily stand-up." In the
+   canvas, look at both the code and the running application. Keep it for
+   step 7.
+2. Start another new chat and ask for a plan first:
+   > I want a web page that picks who goes first at our daily stand-up. Use
+   > HTML, CSS and JavaScript. Don't write any code yet. First ask me the
+   > questions you need answered. Then propose a step-by-step plan,
+   > including what the page will look like. Wait for my approval before
+   > you start.
+3. Answer its questions, change the plan where you disagree, and approve it.
+4. Follow-up: "Carry out step 1 only." In the canvas, read the code, then
+   try the application. Only ask for the next step when it works.
+5. Change your mind halfway, e.g. "Someone is on holiday today." Does
+   Copilot update the plan, or just patch the code?
+6. When all steps are done, ask: "Export the page as a single HTML file
+   with the CSS and JavaScript included." The canvas has no export or
+   download option, so copy the code into a file named `standup.html` and
+   open it in your browser. Does it still work outside Copilot?
+7. Compare: put both pages side by side. What did the first page assume
+   that the plan made explicit (where the names come from, whether they're
+   remembered, whether absent people can be skipped, a wheel or a list)?
+   Did Copilot borrow anything from your earlier chats? When is planning
+   first worth the extra time, and when is it overkill?
+
+---
+
+## Exercise 23: Introduction to notebooks
 
 **Goal:** use a Copilot Notebook to answer questions from a set of project
 documents, and find out whether Copilot notices where they contradict each
 other.
 
 1. Create a notebook in Copilot and add the four Word documents in
-   `examples/22-simple-notebook` as references: the user story, the functional
+   `examples/23-simple-notebook` as references: the user story, the functional
    design, the refinement meeting notes and the customer service FAQ. Skim
    them for two minutes.
 2. Ask: "Look at the referenced documents. What is the cut-off time for same-day shipping?" Does Copilot give
@@ -524,7 +562,7 @@ other.
 
 ---
 
-## Exercise 23: Introduction to agents
+## Exercise 24: Introduction to agents
 
 **Goal:** learn what an agent is and how to use one, with an agent built by
 Microsoft: Prompt Coach.
@@ -556,7 +594,7 @@ same way as with Copilot, but it behaves differently without you asking.
 
 ---
 
-## Exercise 24: Creating a new agent
+## Exercise 25: Creating a new agent
 
 **Goal:** see what an agent in Copilot really is: instructions that are
 added to every conversation without you typing them.
@@ -582,7 +620,7 @@ added to every conversation without you typing them.
 
 ---
 
-## Exercise 25: Introduction to skills
+## Exercise 26: Introduction to skills
 
 **Goal:** see what a skill is and how it differs from an agent's
 instructions.
@@ -591,7 +629,7 @@ An agent's instructions apply to every message. A skill is a separate set
 of instructions with a name and a description, and the agent only uses it
 when your question matches the name of skill.
 
-1. Open `examples/25-user-story-checker/user-story-checker/SKILL.md` and
+1. Open `examples/26-user-story-checker/user-story-checker/SKILL.md` and
    read it for two minutes. What is in the frontmatter between the `---`
    lines, and what is in the rest of the file? What is the description
    for?
@@ -605,7 +643,7 @@ when your question matches the name of skill.
 3. Start a conversation with the agent and ask a question that doesn't
    need the skill: "What's the difference between a user story and a use
    case?" Do you get a normal answer, or a user story check?
-4. Paste the stories from `examples/25-user-story-checker/stories.txt`
+4. Paste the stories from `examples/26-user-story-checker/stories.txt`
    one at a time, without explaining what you want. Does the agent start
    with a **User story check** table? If not, figure out how to trigger
    the skill. Which problems does it find, and does
@@ -618,14 +656,14 @@ when your question matches the name of skill.
 
 ---
 
-## Exercise 26: From a conversation to a skill
+## Exercise 27: From a conversation to a skill
 
 **Goal:** do a task once with Copilot, correcting it along the way, then
 capture the result as a skill that an agent gets right the first time.
 
-1. Open `examples/26-bug-reports/checkout-error.txt`: a message from a
+1. Open `examples/27-bug-reports/checkout-error.txt`: a message from a
    colleague who wants a bug report. Add it to a new Copilot chat together with
-   `examples/26-bug-reports/order-service.log` and ask: "Turn this into a bug
+   `examples/27-bug-reports/order-service.log` and ask: "Turn this into a bug
    report."
 2. Correct the result one step at a time, for example:
    - "Write the bug report in a format that I can directly upload to Jira."
@@ -647,7 +685,7 @@ capture the result as a skill that an agent gets right the first time.
    can be imported into Jira. Use the skill jira-bug-report-writer."
    Add the skill file you created and press the 'Create' button.
 6. Start a conversation with the agent. Paste
-   `examples/26-bug-reports/payment-declined.txt` and the log, and ask only:
+   `examples/27-bug-reports/payment-declined.txt` and the log, and ask only:
    "Bug report, please."
 7. Compare: did the agent apply all your rules the first time? The second
    bug is different: is it even a bug, or is the payment simply
@@ -663,7 +701,7 @@ capture the result as a skill that an agent gets right the first time.
 
 ---
 
-## Exercise 27: Let Copilot be your copilot
+## Exercise 28: Let Copilot be your copilot
 
 **Goal:** find out which of your own work Copilot can help with, or take
 over.
