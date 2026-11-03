@@ -538,7 +538,7 @@ A *canvas* (also called *page*) is a panel next to the chat where Copilot
 builds something you keep working on, such as a web page. Instead of a new
 answer in the chat each time, Copilot updates the same canvas with every
 follow-up. For a web page, the canvas shows the code and runs the
-application.
+application. Each canvas is saved in the *Library*.
 
 > Note: use Microsoft Edge. Other browsers block the preview in the canvas.
 > Choose a sensitivity label when Copilot asks for one.
